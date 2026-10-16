@@ -1,0 +1,14 @@
+fastapi>=0.115
+uvicorn[standard]>=0.30
+SQLAlchemy>=2.0
+PyMySQL>=1.1
+cryptography>=42      # requerido por PyMySQL para el login de MySQL 8 (caching_sha2_password)
+pydantic>=2.7
+python-dotenv>=1.0
+PyJWT>=2.8
+pandas>=2.2
+networkx>=3.2
+reportlab>=4.0
+# Pruebas
+pytest>=8.0
+httpx>=0.27

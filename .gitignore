@@ -1,0 +1,30 @@
+# Configuración local con contraseñas: NUNCA se sube (use los .env.example)
+.env
+*.env.local
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.db
+
+# Node / Vite
+node_modules/
+dist/
+.vite/
+*.log
+
+# Archivos grandes o generados
+*.zip
+*.tgz
+*.osm.pbf
+*.osrm*
+
+# Sistema operativo y editores
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

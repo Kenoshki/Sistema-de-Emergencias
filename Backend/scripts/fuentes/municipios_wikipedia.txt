@@ -1,0 +1,341 @@
+# Departamento|Municipio  — fuente: es.wikipedia.org/wiki/Anexo:Municipios_de_Guatemala (consultado 2026-10-15)
+Alta Verapaz|Chahal
+Alta Verapaz|Chisec
+Alta Verapaz|Cobán
+Alta Verapaz|Fray Bartolomé de las Casas
+Alta Verapaz|Santa Catalina La Tinta
+Alta Verapaz|Lanquín
+Alta Verapaz|Panzós
+Alta Verapaz|Raxruhá
+Alta Verapaz|San Cristóbal Verapaz
+Alta Verapaz|San Juan Chamelco
+Alta Verapaz|San Pedro Carchá
+Alta Verapaz|Santa Cruz Verapaz
+Alta Verapaz|Santa María Cahabón
+Alta Verapaz|Senahú
+Alta Verapaz|Tamahú
+Alta Verapaz|Tactic
+Alta Verapaz|Tucurú
+Baja Verapaz|Cubulco
+Baja Verapaz|Granados
+Baja Verapaz|Purulhá
+Baja Verapaz|Rabinal
+Baja Verapaz|Salamá
+Baja Verapaz|San Jerónimo
+Baja Verapaz|San Miguel Chicaj
+Baja Verapaz|Santa Cruz el Chol
+Chimaltenango|Acatenango
+Chimaltenango|Chimaltenango
+Chimaltenango|El Tejar
+Chimaltenango|Parramos
+Chimaltenango|Patzicía
+Chimaltenango|Patzún
+Chimaltenango|Pochuta
+Chimaltenango|San Andrés Itzapa
+Chimaltenango|San José Poaquíl
+Chimaltenango|San Juan Comalapa
+Chimaltenango|San Martín Jilotepeque
+Chimaltenango|Santa Apolonia
+Chimaltenango|Santa Cruz Balanyá
+Chimaltenango|Tecpán
+Chimaltenango|Yepocapa
+Chimaltenango|Zaragoza
+Chiquimula|Camotán
+Chiquimula|Chiquimula
+Chiquimula|Concepción Las Minas
+Chiquimula|Esquipulas
+Chiquimula|Ipala
+Chiquimula|Jocotán
+Chiquimula|Olopa
+Chiquimula|Quetzaltepeque
+Chiquimula|San Jacinto
+Chiquimula|San José la Arada
+Chiquimula|San Juan Ermita
+El Progreso|El Jícaro
+El Progreso|Guastatoya
+El Progreso|Morazán
+El Progreso|San Agustín Acasaguastlán
+El Progreso|San Antonio La Paz
+El Progreso|San Cristóbal Acasaguastlán
+El Progreso|Sanarate
+El Progreso|Sansare
+Escuintla|Escuintla
+Escuintla|Guanagazapa
+Escuintla|Iztapa
+Escuintla|La Democracia
+Escuintla|La Gomera
+Escuintla|Masagua
+Escuintla|Nueva Concepción
+Escuintla|Palín
+Escuintla|San José
+Escuintla|San Vicente Pacaya
+Escuintla|Santa Lucía Cotzumalguapa
+Escuintla|Sipacate
+Escuintla|Siquinalá
+Escuintla|Tiquisate
+Guatemala|Amatitlán
+Guatemala|Chinautla
+Guatemala|Chuarrancho
+Guatemala|Ciudad de Guatemala
+Guatemala|Fraijanes
+Guatemala|Mixco
+Guatemala|Palencia
+Guatemala|San José del Golfo
+Guatemala|San José Pinula
+Guatemala|San Juan Sacatepéquez
+Guatemala|San Miguel Petapa
+Guatemala|San Pedro Ayampuc
+Guatemala|San Pedro Sacatepéquez
+Guatemala|San Raymundo
+Guatemala|Santa Catarina Pinula
+Guatemala|Villa Canales
+Guatemala|Villa Nueva
+Huehuetenango|Aguacatán
+Huehuetenango|Chiantla
+Huehuetenango|Colotenango
+Huehuetenango|Concepción Huista
+Huehuetenango|Cuilco
+Huehuetenango|Huehuetenango
+Huehuetenango|Jacaltenango
+Huehuetenango|La Democracia
+Huehuetenango|La Libertad
+Huehuetenango|Malacatancito
+Huehuetenango|Nentón
+Huehuetenango|Petatán
+Huehuetenango|San Antonio Huista
+Huehuetenango|San Gaspar Ixchil
+Huehuetenango|San Ildefonso Ixtahuacán
+Huehuetenango|San Juan Atitán
+Huehuetenango|San Juan Ixcoy
+Huehuetenango|San Mateo Ixtatán
+Huehuetenango|San Miguel Acatán
+Huehuetenango|San Pedro Nécta
+Huehuetenango|San Pedro Soloma
+Huehuetenango|San Rafael La Independencia
+Huehuetenango|San Rafael Pétzal
+Huehuetenango|San Sebastián Coatán
+Huehuetenango|San Sebastián Huehuetenango
+Huehuetenango|Santa Ana Huista
+Huehuetenango|Santa Bárbara
+Huehuetenango|Santa Cruz Barillas
+Huehuetenango|Santa Eulalia
+Huehuetenango|Santiago Chimaltenango
+Huehuetenango|Tectitán
+Huehuetenango|Todos Santos Cuchumatán
+Huehuetenango|Unión Cantinil
+Izabal|El Estor
+Izabal|Livingston
+Izabal|Los Amates
+Izabal|Morales
+Izabal|Puerto Barrios
+Jalapa|Jalapa
+Jalapa|Mataquescuintla
+Jalapa|Monjas
+Jalapa|San Carlos Alzatate
+Jalapa|San Luis Jilotepeque
+Jalapa|San Manuel Chaparrón
+Jalapa|San Pedro Pinula
+Jutiapa|Agua Blanca
+Jutiapa|Asunción Mita
+Jutiapa|Atescatempa
+Jutiapa|Comapa
+Jutiapa|Conguaco
+Jutiapa|El Adelanto
+Jutiapa|El Progreso
+Jutiapa|Jalpatagua
+Jutiapa|Jerez
+Jutiapa|Jutiapa
+Jutiapa|Moyuta
+Jutiapa|Pasaco
+Jutiapa|Quesada
+Jutiapa|San José Acatempa
+Jutiapa|Santa Catarina Mita
+Jutiapa|Yupiltepeque
+Jutiapa|Zapotitlán
+Petén|Dolores
+Petén|El Chal
+Petén|Flores
+Petén|La Libertad
+Petén|Las Cruces
+Petén|Melchor de Mencos
+Petén|Poptún
+Petén|San Andrés
+Petén|San Benito
+Petén|San Francisco
+Petén|San José
+Petén|San Luis
+Petén|Santa Ana
+Petén|Sayaxché
+Quetzaltenango|Almolonga
+Quetzaltenango|Cabricán
+Quetzaltenango|Cajolá
+Quetzaltenango|Cantel
+Quetzaltenango|Coatepeque
+Quetzaltenango|Colomba Costa Cuca
+Quetzaltenango|Concepción Chiquirichapa
+Quetzaltenango|El Palmar
+Quetzaltenango|Flores Costa Cuca
+Quetzaltenango|Génova
+Quetzaltenango|Huitán
+Quetzaltenango|La Esperanza
+Quetzaltenango|Olintepeque
+Quetzaltenango|Palestina de Los Altos
+Quetzaltenango|Quetzaltenango
+Quetzaltenango|Salcajá
+Quetzaltenango|San Carlos Sija
+Quetzaltenango|San Francisco La Unión
+Quetzaltenango|San Juan Ostuncalco
+Quetzaltenango|San Martín Sacatepéquez
+Quetzaltenango|San Mateo
+Quetzaltenango|San Miguel Sigüilá
+Quetzaltenango|Sibilia
+Quetzaltenango|Zunil
+Quiché|Canillá
+Quiché|Chajul
+Quiché|Chicamán
+Quiché|Chiché
+Quiché|Santo Tomás Chichicastenango
+Quiché|Chinique
+Quiché|Cunén
+Quiché|Ixcán
+Quiché|Joyabaj
+Quiché|Nebaj
+Quiché|Pachalum
+Quiché|Patzité
+Quiché|Sacapulas
+Quiché|San Andrés Sajcabajá
+Quiché|San Antonio Ilotenango
+Quiché|San Bartolomé Jocotenango
+Quiché|San Juan Cotzal
+Quiché|San Pedro Jocopilas
+Quiché|Santa Cruz del Quiché
+Quiché|Uspantán
+Quiché|Zacualpa
+Retalhuleu|Champerico
+Retalhuleu|El Asintal
+Retalhuleu|Nuevo San Carlos
+Retalhuleu|Retalhuleu
+Retalhuleu|San Andrés Villa Seca
+Retalhuleu|San Felipe
+Retalhuleu|San Martín Zapotitlán
+Retalhuleu|San Sebastián
+Retalhuleu|Santa Cruz Muluá
+Sacatepéquez|Alotenango
+Sacatepéquez|Ciudad Vieja
+Sacatepéquez|Jocotenango
+Sacatepéquez|La Antigua Guatemala
+Sacatepéquez|Magdalena Milpas Altas
+Sacatepéquez|Pastores
+Sacatepéquez|San Antonio Aguas Calientes
+Sacatepéquez|San Bartolomé Milpas Altas
+Sacatepéquez|San Lucas Sacatepéquez
+Sacatepéquez|San Miguel Dueñas
+Sacatepéquez|Santa Catarina Barahona
+Sacatepéquez|Santa Lucía Milpas Altas
+Sacatepéquez|Santa María de Jesús
+Sacatepéquez|Santiago Sacatepéquez
+Sacatepéquez|Santo Domingo Xenacoj
+Sacatepéquez|Sumpango
+San Marcos|Ayutla
+San Marcos|Catarina
+San Marcos|Comitancillo
+San Marcos|Concepción Tutuapa
+San Marcos|El Quetzal
+San Marcos|El Tumbador
+San Marcos|Esquipulas Palo Gordo
+San Marcos|Ixchiguán
+San Marcos|La Blanca
+San Marcos|La Reforma
+San Marcos|Malacatán
+San Marcos|Nuevo Progreso
+San Marcos|Ocós
+San Marcos|Pajapita
+San Marcos|Río Blanco
+San Marcos|San Antonio Sacatepéquez
+San Marcos|San Cristóbal Cucho
+San Marcos|San José El Rodeo
+San Marcos|San José Ojetenam
+San Marcos|San Lorenzo
+San Marcos|San Marcos
+San Marcos|San Miguel Ixtahuacán
+San Marcos|San Pablo
+San Marcos|San Pedro Sacatepéquez
+San Marcos|San Rafael Pie de la Cuesta
+San Marcos|Sibinal
+San Marcos|Sipacapa
+San Marcos|Tacaná
+San Marcos|Tajumulco
+San Marcos|Tejutla
+Santa Rosa|Barberena
+Santa Rosa|Casillas
+Santa Rosa|Chiquimulilla
+Santa Rosa|Cuilapa
+Santa Rosa|Guazacapán
+Santa Rosa|Nueva Santa Rosa
+Santa Rosa|Oratorio
+Santa Rosa|Pueblo Nuevo Viñas
+Santa Rosa|San Juan Tecuaco
+Santa Rosa|San Rafael las Flores
+Santa Rosa|Santa Cruz Naranjo
+Santa Rosa|Santa María Ixhuatán
+Santa Rosa|Santa Rosa de Lima
+Santa Rosa|Taxisco
+Sololá|Concepción
+Sololá|Nahualá
+Sololá|Panajachel
+Sololá|San Andrés Semetabaj
+Sololá|San Antonio Palopó
+Sololá|San José Chacayá
+Sololá|San Juan La Laguna
+Sololá|San Lucas Tolimán
+Sololá|San Marcos La Laguna
+Sololá|San Pablo La Laguna
+Sololá|San Pedro La Laguna
+Sololá|Santa Catarina Ixtahuacán
+Sololá|Santa Catarina Palopó
+Sololá|Santa Clara La Laguna
+Sololá|Santa Cruz La Laguna
+Sololá|Santa Lucía Utatlán
+Sololá|Santa María Visitación
+Sololá|Santiago Atitlán
+Sololá|Sololá
+Suchitepéquez|Chicacao
+Suchitepéquez|Cuyotenango
+Suchitepéquez|Mazatenango
+Suchitepéquez|Patulul
+Suchitepéquez|Pueblo Nuevo
+Suchitepéquez|Río Bravo
+Suchitepéquez|Samayac
+Suchitepéquez|San Antonio Suchitepéquez
+Suchitepéquez|San Bernardino
+Suchitepéquez|San Francisco Zapotitlán
+Suchitepéquez|San Gabriel
+Suchitepéquez|San José El Idolo
+Suchitepéquez|San José La Maquina
+Suchitepéquez|San Juan Bautista
+Suchitepéquez|San Lorenzo
+Suchitepéquez|San Miguel Panán
+Suchitepéquez|San Pablo Jocopilas
+Suchitepéquez|Santa Bárbara
+Suchitepéquez|Santo Domingo Suchitepéquez
+Suchitepéquez|Santo Tomás La Unión
+Suchitepéquez|Zunilito
+Totonicapán|Momostenango
+Totonicapán|San Andrés Xecul
+Totonicapán|San Bartolo
+Totonicapán|San Cristóbal Totonicapán
+Totonicapán|San Francisco El Alto
+Totonicapán|Santa Lucía La Reforma
+Totonicapán|Santa María Chiquimula
+Totonicapán|Totonicapán
+Zacapa|Cabañas
+Zacapa|Estanzuela
+Zacapa|Gualán
+Zacapa|Huité
+Zacapa|La Unión
+Zacapa|Río Hondo
+Zacapa|San Diego
+Zacapa|San Jorge
+Zacapa|Teculután
+Zacapa|Usumatlán
+Zacapa|Zacapa

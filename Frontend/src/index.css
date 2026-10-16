@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+/* Paleta inspirada en la señalización vial y los colores de las unidades de emergencia. */
+@theme {
+  --font-sans: "Barlow", system-ui, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Barlow Condensed", "Barlow", system-ui, sans-serif;
+
+  --color-ink: #14213d;        /* tinta: texto principal y barra lateral */
+  --color-ink-soft: #2b3a5c;
+  --color-paper: #eef1f4;      /* fondo general */
+  --color-surface: #ffffff;
+  --color-line: #d5dbe3;
+  --color-muted: #5b6779;
+
+  --color-critical: #c81e35;   /* prioridad 4 */
+  --color-high: #b86e00;       /* prioridad 3 (texto) */
+  --color-high-fill: #f0a20c;  /* prioridad 3 (relleno) */
+  --color-medium: #2f62ad;     /* prioridad 2 */
+  --color-low: #6b7587;        /* prioridad 1 */
+
+  --color-route: #0d7280;      /* unidades y rutas */
+  --color-route-soft: #d8eef0;
+  --color-ok: #23784a;
+  --color-ok-soft: #dcefe3;
+}
+
+html { background: var(--color-paper); color: var(--color-ink); }
+body { margin: 0; font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+
+.num { font-variant-numeric: tabular-nums; }
+
+:focus-visible { outline: 3px solid var(--color-route); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+@keyframes pulso {
+  0% { r: 9; opacity: 0.55; }
+  100% { r: 22; opacity: 0; }
+}
+.pulso { animation: pulso 1.6s ease-out infinite; }
+
+/* ---- Mapa OpenStreetMap (Leaflet) ---- */
+.leaflet-container { font-family: inherit; background: var(--color-paper); }
+.leaflet-tooltip { font-size: 12px; font-weight: 600; color: var(--color-ink); border-color: var(--color-line); }
+.osm-zona span, .osm-etiqueta span, .osm-orden span {
+  position: absolute; transform: translate(-50%, -50%); white-space: nowrap; pointer-events: none;
+}
+.osm-zona span {
+  font-family: var(--font-display); font-weight: 700; font-size: 11px; line-height: 1; color: var(--color-ink);
+  text-shadow: 0 0 2px #fff, 0 0 2px #fff;
+}
+.osm-zona.oscuro span { color: #fff; text-shadow: none; }
+.osm-etiqueta span {
+  transform: translate(-50%, -190%); font-size: 12px; font-weight: 700; color: var(--color-ink);
+  background: #fff; border: 1px solid var(--color-line); border-radius: 4px; padding: 1px 6px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.15);
+}
+.osm-orden span {
+  transform: translate(6px, -22px); font-size: 10px; font-weight: 700; color: var(--color-ink);
+  background: #f0a20c; border-radius: 3px; padding: 0 4px;
+}
+.osm-unidades div {
+  position: absolute; transform: translate(-50%, 7px); display: grid; grid-template-columns: repeat(4, auto); gap: 2px;
+}
+.osm-unidades i {
+  display: block; width: 7px; height: 7px; border-radius: 2px; border: 1px solid #fff;
+  font-style: normal; font-size: 9px; line-height: 12px; font-weight: 700; color: #fff; text-align: center;
+}
+.osm-unidades.grande i { width: 14px; height: 14px; }
+.osm-unidades b { font-size: 10px; color: var(--color-ink); text-shadow: 0 0 3px #fff; align-self: center; }
+.osm-incidente span {
+  position: absolute; width: 14px; height: 14px; margin: -7px 0 0 -7px; border-radius: 9999px;
+  background: var(--c); border: 2px solid #fff; box-shadow: 0 1px 4px rgb(0 0 0 / 0.35); cursor: pointer;
+  display: grid; place-items: center;
+}
+.osm-incidente span i { width: 4px; height: 4px; border-radius: 9999px; background: #fff; }
+.osm-incidente span.critico::after {
+  content: ''; position: absolute; inset: -2px; border-radius: 9999px; background: var(--c);
+  animation: pulso-osm 1.6s ease-out infinite; z-index: -1;
+}
+@keyframes pulso-osm { 0% { transform: scale(1); opacity: 0.55; } 100% { transform: scale(2.6); opacity: 0; } }

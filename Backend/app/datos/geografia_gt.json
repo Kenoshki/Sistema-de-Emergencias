@@ -1,0 +1,3221 @@
+{
+ "fuente": "Municipios: Wikipedia (Anexo:Municipios de Guatemala). Coordenadas: Banco Mundial, Guatemala - Municipalities head offices (CC BY 4.0). Códigos de municipio internos: DD + correlativo.",
+ "departamentos": [
+  {
+   "codigo": "01",
+   "nombre": "Guatemala",
+   "cabecera": "Ciudad de Guatemala",
+   "lat": 14.586389,
+   "lon": -90.532778
+  },
+  {
+   "codigo": "02",
+   "nombre": "El Progreso",
+   "cabecera": "Guastatoya",
+   "lat": 14.853889,
+   "lon": -90.068611
+  },
+  {
+   "codigo": "03",
+   "nombre": "Sacatepéquez",
+   "cabecera": "La Antigua Guatemala",
+   "lat": 14.556667,
+   "lon": -90.733889
+  },
+  {
+   "codigo": "04",
+   "nombre": "Chimaltenango",
+   "cabecera": "Chimaltenango",
+   "lat": 14.660556,
+   "lon": -90.819444
+  },
+  {
+   "codigo": "05",
+   "nombre": "Escuintla",
+   "cabecera": "Escuintla",
+   "lat": 14.300833,
+   "lon": -90.785556
+  },
+  {
+   "codigo": "06",
+   "nombre": "Santa Rosa",
+   "cabecera": "Cuilapa",
+   "lat": 14.276073,
+   "lon": -90.299001
+  },
+  {
+   "codigo": "07",
+   "nombre": "Sololá",
+   "cabecera": "Sololá",
+   "lat": 14.77,
+   "lon": -91.182778
+  },
+  {
+   "codigo": "08",
+   "nombre": "Totonicapán",
+   "cabecera": "Totonicapán",
+   "lat": 14.910385,
+   "lon": -91.359523
+  },
+  {
+   "codigo": "09",
+   "nombre": "Quetzaltenango",
+   "cabecera": "Quetzaltenango",
+   "lat": 14.837777,
+   "lon": -91.5175
+  },
+  {
+   "codigo": "10",
+   "nombre": "Suchitepéquez",
+   "cabecera": "Mazatenango",
+   "lat": 14.533889,
+   "lon": -91.503333
+  },
+  {
+   "codigo": "11",
+   "nombre": "Retalhuleu",
+   "cabecera": "Retalhuleu",
+   "lat": 14.535278,
+   "lon": -91.678333
+  },
+  {
+   "codigo": "12",
+   "nombre": "San Marcos",
+   "cabecera": "San Marcos",
+   "lat": 14.961111,
+   "lon": -91.795556
+  },
+  {
+   "codigo": "13",
+   "nombre": "Huehuetenango",
+   "cabecera": "Huehuetenango",
+   "lat": 15.320555,
+   "lon": -91.470278
+  },
+  {
+   "codigo": "14",
+   "nombre": "Quiché",
+   "cabecera": "Santa Cruz del Quiché",
+   "lat": 15.029445,
+   "lon": -91.149166
+  },
+  {
+   "codigo": "15",
+   "nombre": "Baja Verapaz",
+   "cabecera": "Salamá",
+   "lat": 15.102368,
+   "lon": -90.316576
+  },
+  {
+   "codigo": "16",
+   "nombre": "Alta Verapaz",
+   "cabecera": "Cobán",
+   "lat": 15.469,
+   "lon": -90.372315
+  },
+  {
+   "codigo": "17",
+   "nombre": "Petén",
+   "cabecera": "Flores",
+   "lat": 16.929166,
+   "lon": -89.890833
+  },
+  {
+   "codigo": "18",
+   "nombre": "Izabal",
+   "cabecera": "Puerto Barrios",
+   "lat": 15.723999,
+   "lon": -88.59496
+  },
+  {
+   "codigo": "19",
+   "nombre": "Zacapa",
+   "cabecera": "Zacapa",
+   "lat": 14.9725,
+   "lon": -89.528334
+  },
+  {
+   "codigo": "20",
+   "nombre": "Chiquimula",
+   "cabecera": "Chiquimula",
+   "lat": 14.799328,
+   "lon": -89.543539
+  },
+  {
+   "codigo": "21",
+   "nombre": "Jalapa",
+   "cabecera": "Jalapa",
+   "lat": 14.633889,
+   "lon": -89.981111
+  },
+  {
+   "codigo": "22",
+   "nombre": "Jutiapa",
+   "cabecera": "Jutiapa",
+   "lat": 14.282778,
+   "lon": -89.8925
+  }
+ ],
+ "municipios": [
+  {
+   "codigo": "0101",
+   "departamento": "01",
+   "nombre": "Ciudad de Guatemala",
+   "lat": 14.586389,
+   "lon": -90.532778,
+   "cabecera_departamental": true,
+   "aproximada": false
+  },
+  {
+   "codigo": "0102",
+   "departamento": "01",
+   "nombre": "Amatitlán",
+   "lat": 14.478334,
+   "lon": -90.618889,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0103",
+   "departamento": "01",
+   "nombre": "Chinautla",
+   "lat": 14.7,
+   "lon": -90.501389,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0104",
+   "departamento": "01",
+   "nombre": "Chuarrancho",
+   "lat": 14.817958,
+   "lon": -90.512923,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0105",
+   "departamento": "01",
+   "nombre": "Fraijanes",
+   "lat": 14.464388,
+   "lon": -90.440836,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0106",
+   "departamento": "01",
+   "nombre": "Mixco",
+   "lat": 14.62911,
+   "lon": -90.601894,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0107",
+   "departamento": "01",
+   "nombre": "Palencia",
+   "lat": 14.668055,
+   "lon": -90.356945,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0108",
+   "departamento": "01",
+   "nombre": "San José del Golfo",
+   "lat": 14.759953,
+   "lon": -90.375028,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0109",
+   "departamento": "01",
+   "nombre": "San José Pinula",
+   "lat": 14.545556,
+   "lon": -90.412778,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0110",
+   "departamento": "01",
+   "nombre": "San Juan Sacatepéquez",
+   "lat": 14.717223,
+   "lon": -90.642778,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0111",
+   "departamento": "01",
+   "nombre": "San Miguel Petapa",
+   "lat": 14.499279,
+   "lon": -90.558767,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0112",
+   "departamento": "01",
+   "nombre": "San Pedro Ayampuc",
+   "lat": 14.777777,
+   "lon": -90.452778,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0113",
+   "departamento": "01",
+   "nombre": "San Pedro Sacatepéquez",
+   "lat": 14.685001,
+   "lon": -90.642222,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0114",
+   "departamento": "01",
+   "nombre": "San Raymundo",
+   "lat": 14.765278,
+   "lon": -90.595833,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0115",
+   "departamento": "01",
+   "nombre": "Santa Catarina Pinula",
+   "lat": 14.570278,
+   "lon": -90.495833,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0116",
+   "departamento": "01",
+   "nombre": "Villa Canales",
+   "lat": 14.484384,
+   "lon": -90.531754,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0117",
+   "departamento": "01",
+   "nombre": "Villa Nueva",
+   "lat": 14.525555,
+   "lon": -90.5875,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0201",
+   "departamento": "02",
+   "nombre": "Guastatoya",
+   "lat": 14.853889,
+   "lon": -90.068611,
+   "cabecera_departamental": true,
+   "aproximada": false
+  },
+  {
+   "codigo": "0202",
+   "departamento": "02",
+   "nombre": "El Jícaro",
+   "lat": 14.913055,
+   "lon": -89.895278,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0203",
+   "departamento": "02",
+   "nombre": "Morazán",
+   "lat": 14.932223,
+   "lon": -90.143333,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0204",
+   "departamento": "02",
+   "nombre": "San Agustín Acasaguastlán",
+   "lat": 14.943611,
+   "lon": -89.968611,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0205",
+   "departamento": "02",
+   "nombre": "San Antonio La Paz",
+   "lat": 14.753802,
+   "lon": -90.285782,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0206",
+   "departamento": "02",
+   "nombre": "San Cristóbal Acasaguastlán",
+   "lat": 14.924861,
+   "lon": -89.87372,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0207",
+   "departamento": "02",
+   "nombre": "Sanarate",
+   "lat": 14.787222,
+   "lon": -90.198333,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0208",
+   "departamento": "02",
+   "nombre": "Sansare",
+   "lat": 14.74662,
+   "lon": -90.115651,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0301",
+   "departamento": "03",
+   "nombre": "La Antigua Guatemala",
+   "lat": 14.556667,
+   "lon": -90.733889,
+   "cabecera_departamental": true,
+   "aproximada": false
+  },
+  {
+   "codigo": "0302",
+   "departamento": "03",
+   "nombre": "Alotenango",
+   "lat": 14.483334,
+   "lon": -90.804722,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0303",
+   "departamento": "03",
+   "nombre": "Ciudad Vieja",
+   "lat": 14.523889,
+   "lon": -90.761667,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0304",
+   "departamento": "03",
+   "nombre": "Jocotenango",
+   "lat": 14.574445,
+   "lon": -90.741111,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0305",
+   "departamento": "03",
+   "nombre": "Magdalena Milpas Altas",
+   "lat": 14.546952,
+   "lon": -90.675287,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0306",
+   "departamento": "03",
+   "nombre": "Pastores",
+   "lat": 14.595854,
+   "lon": -90.758818,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0307",
+   "departamento": "03",
+   "nombre": "San Antonio Aguas Calientes",
+   "lat": 14.546667,
+   "lon": -90.780556,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0308",
+   "departamento": "03",
+   "nombre": "San Bartolomé Milpas Altas",
+   "lat": 14.606389,
+   "lon": -90.679167,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0309",
+   "departamento": "03",
+   "nombre": "San Lucas Sacatepéquez",
+   "lat": 14.610587,
+   "lon": -90.655507,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0310",
+   "departamento": "03",
+   "nombre": "San Miguel Dueñas",
+   "lat": 14.520823,
+   "lon": -90.79832,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0311",
+   "departamento": "03",
+   "nombre": "Santa Catarina Barahona",
+   "lat": 14.549722,
+   "lon": -90.785555,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0312",
+   "departamento": "03",
+   "nombre": "Santa Lucía Milpas Altas",
+   "lat": 14.575274,
+   "lon": -90.678363,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0313",
+   "departamento": "03",
+   "nombre": "Santa María de Jesús",
+   "lat": 14.493333,
+   "lon": -90.709445,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0314",
+   "departamento": "03",
+   "nombre": "Santiago Sacatepéquez",
+   "lat": 14.634722,
+   "lon": -90.679166,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0315",
+   "departamento": "03",
+   "nombre": "Santo Domingo Xenacoj",
+   "lat": 14.68,
+   "lon": -90.7,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0316",
+   "departamento": "03",
+   "nombre": "Sumpango",
+   "lat": 14.643612,
+   "lon": -90.736666,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0401",
+   "departamento": "04",
+   "nombre": "Chimaltenango",
+   "lat": 14.660556,
+   "lon": -90.819444,
+   "cabecera_departamental": true,
+   "aproximada": false
+  },
+  {
+   "codigo": "0402",
+   "departamento": "04",
+   "nombre": "Acatenango",
+   "lat": 14.553872,
+   "lon": -90.943991,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0403",
+   "departamento": "04",
+   "nombre": "El Tejar",
+   "lat": 14.645833,
+   "lon": -90.791667,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0404",
+   "departamento": "04",
+   "nombre": "Parramos",
+   "lat": 14.608334,
+   "lon": -90.802222,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0405",
+   "departamento": "04",
+   "nombre": "Patzicía",
+   "lat": 14.631667,
+   "lon": -90.926389,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0406",
+   "departamento": "04",
+   "nombre": "Patzún",
+   "lat": 14.68069,
+   "lon": -91.015681,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0407",
+   "departamento": "04",
+   "nombre": "Pochuta",
+   "lat": 14.543048,
+   "lon": -91.089477,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0408",
+   "departamento": "04",
+   "nombre": "San Andrés Itzapa",
+   "lat": 14.620833,
+   "lon": -90.844445,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0409",
+   "departamento": "04",
+   "nombre": "San José Poaquíl",
+   "lat": 14.817248,
+   "lon": -90.912489,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0410",
+   "departamento": "04",
+   "nombre": "San Juan Comalapa",
+   "lat": 14.74,
+   "lon": -90.8875,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0411",
+   "departamento": "04",
+   "nombre": "San Martín Jilotepeque",
+   "lat": 14.78,
+   "lon": -90.793056,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0412",
+   "departamento": "04",
+   "nombre": "Santa Apolonia",
+   "lat": 14.79,
+   "lon": -90.973611,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0413",
+   "departamento": "04",
+   "nombre": "Santa Cruz Balanyá",
+   "lat": 14.685205,
+   "lon": -90.919393,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0414",
+   "departamento": "04",
+   "nombre": "Tecpán",
+   "lat": 14.760278,
+   "lon": -90.991667,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0415",
+   "departamento": "04",
+   "nombre": "Yepocapa",
+   "lat": 14.5,
+   "lon": -90.954167,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0416",
+   "departamento": "04",
+   "nombre": "Zaragoza",
+   "lat": 14.65,
+   "lon": -90.890556,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0501",
+   "departamento": "05",
+   "nombre": "Escuintla",
+   "lat": 14.300833,
+   "lon": -90.785556,
+   "cabecera_departamental": true,
+   "aproximada": false
+  },
+  {
+   "codigo": "0502",
+   "departamento": "05",
+   "nombre": "Guanagazapa",
+   "lat": 14.225173,
+   "lon": -90.641929,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0503",
+   "departamento": "05",
+   "nombre": "Iztapa",
+   "lat": 13.929167,
+   "lon": -90.716111,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0504",
+   "departamento": "05",
+   "nombre": "La Democracia",
+   "lat": 14.228889,
+   "lon": -90.947778,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0505",
+   "departamento": "05",
+   "nombre": "La Gomera",
+   "lat": 14.084564,
+   "lon": -91.050936,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0506",
+   "departamento": "05",
+   "nombre": "Masagua",
+   "lat": 14.202705,
+   "lon": -90.848462,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0507",
+   "departamento": "05",
+   "nombre": "Nueva Concepción",
+   "lat": 14.18479,
+   "lon": -91.314916,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0508",
+   "departamento": "05",
+   "nombre": "Palín",
+   "lat": 14.403173,
+   "lon": -90.697754,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0509",
+   "departamento": "05",
+   "nombre": "San José",
+   "lat": 13.922778,
+   "lon": -90.819445,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0510",
+   "departamento": "05",
+   "nombre": "San Vicente Pacaya",
+   "lat": 14.414167,
+   "lon": -90.635556,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0511",
+   "departamento": "05",
+   "nombre": "Santa Lucía Cotzumalguapa",
+   "lat": 14.331666,
+   "lon": -91.025,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0512",
+   "departamento": "05",
+   "nombre": "Sipacate",
+   "lat": 13.935,
+   "lon": -91.145,
+   "cabecera_departamental": false,
+   "aproximada": true
+  },
+  {
+   "codigo": "0513",
+   "departamento": "05",
+   "nombre": "Siquinalá",
+   "lat": 14.305833,
+   "lon": -90.966111,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0514",
+   "departamento": "05",
+   "nombre": "Tiquisate",
+   "lat": 14.281312,
+   "lon": -91.359723,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0601",
+   "departamento": "06",
+   "nombre": "Cuilapa",
+   "lat": 14.276073,
+   "lon": -90.299001,
+   "cabecera_departamental": true,
+   "aproximada": false
+  },
+  {
+   "codigo": "0602",
+   "departamento": "06",
+   "nombre": "Barberena",
+   "lat": 14.306102,
+   "lon": -90.360785,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0603",
+   "departamento": "06",
+   "nombre": "Casillas",
+   "lat": 14.417222,
+   "lon": -90.243889,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0604",
+   "departamento": "06",
+   "nombre": "Chiquimulilla",
+   "lat": 14.086944,
+   "lon": -90.38,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0605",
+   "departamento": "06",
+   "nombre": "Guazacapán",
+   "lat": 14.071666,
+   "lon": -90.418611,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0606",
+   "departamento": "06",
+   "nombre": "Nueva Santa Rosa",
+   "lat": 14.379037,
+   "lon": -90.284971,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0607",
+   "departamento": "06",
+   "nombre": "Oratorio",
+   "lat": 14.229091,
+   "lon": -90.177559,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0608",
+   "departamento": "06",
+   "nombre": "Pueblo Nuevo Viñas",
+   "lat": 14.22636,
+   "lon": -90.475206,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0609",
+   "departamento": "06",
+   "nombre": "San Juan Tecuaco",
+   "lat": 14.083037,
+   "lon": -90.266125,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0610",
+   "departamento": "06",
+   "nombre": "San Rafael las Flores",
+   "lat": 14.474444,
+   "lon": -90.181111,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0611",
+   "departamento": "06",
+   "nombre": "Santa Cruz Naranjo",
+   "lat": 14.383495,
+   "lon": -90.370851,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0612",
+   "departamento": "06",
+   "nombre": "Santa María Ixhuatán",
+   "lat": 14.188333,
+   "lon": -90.2775,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0613",
+   "departamento": "06",
+   "nombre": "Santa Rosa de Lima",
+   "lat": 14.388333,
+   "lon": -90.295,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0614",
+   "departamento": "06",
+   "nombre": "Taxisco",
+   "lat": 14.069789,
+   "lon": -90.464499,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0701",
+   "departamento": "07",
+   "nombre": "Sololá",
+   "lat": 14.77,
+   "lon": -91.182778,
+   "cabecera_departamental": true,
+   "aproximada": false
+  },
+  {
+   "codigo": "0702",
+   "departamento": "07",
+   "nombre": "Concepción",
+   "lat": 14.784723,
+   "lon": -91.146667,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0703",
+   "departamento": "07",
+   "nombre": "Nahualá",
+   "lat": 14.842223,
+   "lon": -91.318056,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0704",
+   "departamento": "07",
+   "nombre": "Panajachel",
+   "lat": 14.742778,
+   "lon": -91.158333,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0705",
+   "departamento": "07",
+   "nombre": "San Andrés Semetabaj",
+   "lat": 14.745368,
+   "lon": -91.133357,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0706",
+   "departamento": "07",
+   "nombre": "San Antonio Palopó",
+   "lat": 14.691482,
+   "lon": -91.11413,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0707",
+   "departamento": "07",
+   "nombre": "San José Chacayá",
+   "lat": 14.772518,
+   "lon": -91.212734,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0708",
+   "departamento": "07",
+   "nombre": "San Juan La Laguna",
+   "lat": 14.694167,
+   "lon": -91.286667,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0709",
+   "departamento": "07",
+   "nombre": "San Lucas Tolimán",
+   "lat": 14.632778,
+   "lon": -91.142222,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0710",
+   "departamento": "07",
+   "nombre": "San Marcos La Laguna",
+   "lat": 14.723617,
+   "lon": -91.259089,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0711",
+   "departamento": "07",
+   "nombre": "San Pablo La Laguna",
+   "lat": 14.718056,
+   "lon": -91.271667,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0712",
+   "departamento": "07",
+   "nombre": "San Pedro La Laguna",
+   "lat": 14.690278,
+   "lon": -91.2725,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0713",
+   "departamento": "07",
+   "nombre": "Santa Catarina Ixtahuacán",
+   "lat": 14.797021,
+   "lon": -91.359463,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0714",
+   "departamento": "07",
+   "nombre": "Santa Catarina Palopó",
+   "lat": 14.721273,
+   "lon": -91.13302,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0715",
+   "departamento": "07",
+   "nombre": "Santa Clara La Laguna",
+   "lat": 14.713889,
+   "lon": -91.304167,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0716",
+   "departamento": "07",
+   "nombre": "Santa Cruz La Laguna",
+   "lat": 14.740966,
+   "lon": -91.204649,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0717",
+   "departamento": "07",
+   "nombre": "Santa Lucía Utatlán",
+   "lat": 14.768879,
+   "lon": -91.264551,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0718",
+   "departamento": "07",
+   "nombre": "Santa María Visitación",
+   "lat": 14.716666,
+   "lon": -91.308889,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0719",
+   "departamento": "07",
+   "nombre": "Santiago Atitlán",
+   "lat": 14.6375,
+   "lon": -91.23,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0801",
+   "departamento": "08",
+   "nombre": "Totonicapán",
+   "lat": 14.910385,
+   "lon": -91.359523,
+   "cabecera_departamental": true,
+   "aproximada": false
+  },
+  {
+   "codigo": "0802",
+   "departamento": "08",
+   "nombre": "Momostenango",
+   "lat": 15.044444,
+   "lon": -91.408333,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0803",
+   "departamento": "08",
+   "nombre": "San Andrés Xecul",
+   "lat": 14.903611,
+   "lon": -91.4825,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0804",
+   "departamento": "08",
+   "nombre": "San Bartolo",
+   "lat": 15.082704,
+   "lon": -91.454284,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0805",
+   "departamento": "08",
+   "nombre": "San Cristóbal Totonicapán",
+   "lat": 14.915445,
+   "lon": -91.440329,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0806",
+   "departamento": "08",
+   "nombre": "San Francisco El Alto",
+   "lat": 14.944043,
+   "lon": -91.442855,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0807",
+   "departamento": "08",
+   "nombre": "Santa Lucía La Reforma",
+   "lat": 15.127222,
+   "lon": -91.235556,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0808",
+   "departamento": "08",
+   "nombre": "Santa María Chiquimula",
+   "lat": 15.029166,
+   "lon": -91.329444,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0901",
+   "departamento": "09",
+   "nombre": "Quetzaltenango",
+   "lat": 14.837777,
+   "lon": -91.5175,
+   "cabecera_departamental": true,
+   "aproximada": false
+  },
+  {
+   "codigo": "0902",
+   "departamento": "09",
+   "nombre": "Almolonga",
+   "lat": 14.812222,
+   "lon": -91.494445,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0903",
+   "departamento": "09",
+   "nombre": "Cabricán",
+   "lat": 15.074667,
+   "lon": -91.650562,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0904",
+   "departamento": "09",
+   "nombre": "Cajolá",
+   "lat": 14.921389,
+   "lon": -91.614722,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0905",
+   "departamento": "09",
+   "nombre": "Cantel",
+   "lat": 14.81,
+   "lon": -91.455,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0906",
+   "departamento": "09",
+   "nombre": "Coatepeque",
+   "lat": 14.702778,
+   "lon": -91.861111,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0907",
+   "departamento": "09",
+   "nombre": "Colomba Costa Cuca",
+   "lat": 14.707505,
+   "lon": -91.730975,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0908",
+   "departamento": "09",
+   "nombre": "Concepción Chiquirichapa",
+   "lat": 14.855555,
+   "lon": -91.623889,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0909",
+   "departamento": "09",
+   "nombre": "El Palmar",
+   "lat": 14.650255,
+   "lon": -91.589994,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0910",
+   "departamento": "09",
+   "nombre": "Flores Costa Cuca",
+   "lat": 14.655555,
+   "lon": -91.824722,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0911",
+   "departamento": "09",
+   "nombre": "Génova",
+   "lat": 14.62123,
+   "lon": -91.835552,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0912",
+   "departamento": "09",
+   "nombre": "Huitán",
+   "lat": 15.047745,
+   "lon": -91.639339,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0913",
+   "departamento": "09",
+   "nombre": "La Esperanza",
+   "lat": 14.87173,
+   "lon": -91.562492,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0914",
+   "departamento": "09",
+   "nombre": "Olintepeque",
+   "lat": 14.885548,
+   "lon": -91.513699,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0915",
+   "departamento": "09",
+   "nombre": "Palestina de Los Altos",
+   "lat": 14.931944,
+   "lon": -91.693889,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0916",
+   "departamento": "09",
+   "nombre": "Salcajá",
+   "lat": 14.87924,
+   "lon": -91.460233,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0917",
+   "departamento": "09",
+   "nombre": "San Carlos Sija",
+   "lat": 14.98547,
+   "lon": -91.547694,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0918",
+   "departamento": "09",
+   "nombre": "San Francisco La Unión",
+   "lat": 14.923773,
+   "lon": -91.543327,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0919",
+   "departamento": "09",
+   "nombre": "San Juan Ostuncalco",
+   "lat": 14.868334,
+   "lon": -91.620833,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0920",
+   "departamento": "09",
+   "nombre": "San Martín Sacatepéquez",
+   "lat": 14.825018,
+   "lon": -91.643313,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0921",
+   "departamento": "09",
+   "nombre": "San Mateo",
+   "lat": 14.857771,
+   "lon": -91.592494,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0922",
+   "departamento": "09",
+   "nombre": "San Miguel Sigüilá",
+   "lat": 14.895642,
+   "lon": -91.614417,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0923",
+   "departamento": "09",
+   "nombre": "Sibilia",
+   "lat": 14.994324,
+   "lon": -91.624153,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "0924",
+   "departamento": "09",
+   "nombre": "Zunil",
+   "lat": 14.782556,
+   "lon": -91.483835,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1001",
+   "departamento": "10",
+   "nombre": "Mazatenango",
+   "lat": 14.533889,
+   "lon": -91.503333,
+   "cabecera_departamental": true,
+   "aproximada": false
+  },
+  {
+   "codigo": "1002",
+   "departamento": "10",
+   "nombre": "Chicacao",
+   "lat": 14.541944,
+   "lon": -91.326667,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1003",
+   "departamento": "10",
+   "nombre": "Cuyotenango",
+   "lat": 14.538333,
+   "lon": -91.571944,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1004",
+   "departamento": "10",
+   "nombre": "Patulul",
+   "lat": 14.420833,
+   "lon": -91.16,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1005",
+   "departamento": "10",
+   "nombre": "Pueblo Nuevo",
+   "lat": 14.646667,
+   "lon": -91.541111,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1006",
+   "departamento": "10",
+   "nombre": "Río Bravo",
+   "lat": 14.398333,
+   "lon": -91.319444,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1007",
+   "departamento": "10",
+   "nombre": "Samayac",
+   "lat": 14.580833,
+   "lon": -91.461111,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1008",
+   "departamento": "10",
+   "nombre": "San Antonio Suchitepéquez",
+   "lat": 14.538333,
+   "lon": -91.416111,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1009",
+   "departamento": "10",
+   "nombre": "San Bernardino",
+   "lat": 14.540833,
+   "lon": -91.459167,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1010",
+   "departamento": "10",
+   "nombre": "San Francisco Zapotitlán",
+   "lat": 14.588606,
+   "lon": -91.520832,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1011",
+   "departamento": "10",
+   "nombre": "San Gabriel",
+   "lat": 14.510105,
+   "lon": -91.507075,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1012",
+   "departamento": "10",
+   "nombre": "San José El Idolo",
+   "lat": 14.447567,
+   "lon": -91.422564,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1013",
+   "departamento": "10",
+   "nombre": "San José La Maquina",
+   "lat": 14.32,
+   "lon": -91.6,
+   "cabecera_departamental": false,
+   "aproximada": true
+  },
+  {
+   "codigo": "1014",
+   "departamento": "10",
+   "nombre": "San Juan Bautista",
+   "lat": 14.420931,
+   "lon": -91.177942,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1015",
+   "departamento": "10",
+   "nombre": "San Lorenzo",
+   "lat": 14.485257,
+   "lon": -91.510967,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1016",
+   "departamento": "10",
+   "nombre": "San Miguel Panán",
+   "lat": 14.526603,
+   "lon": -91.36544,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1017",
+   "departamento": "10",
+   "nombre": "San Pablo Jocopilas",
+   "lat": 14.586945,
+   "lon": -91.452778,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1018",
+   "departamento": "10",
+   "nombre": "Santa Bárbara",
+   "lat": 14.436667,
+   "lon": -91.227778,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1019",
+   "departamento": "10",
+   "nombre": "Santo Domingo Suchitepéquez",
+   "lat": 14.478444,
+   "lon": -91.482381,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1020",
+   "departamento": "10",
+   "nombre": "Santo Tomás La Unión",
+   "lat": 14.631156,
+   "lon": -91.410397,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1021",
+   "departamento": "10",
+   "nombre": "Zunilito",
+   "lat": 14.612216,
+   "lon": -91.508748,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1101",
+   "departamento": "11",
+   "nombre": "Retalhuleu",
+   "lat": 14.535278,
+   "lon": -91.678333,
+   "cabecera_departamental": true,
+   "aproximada": false
+  },
+  {
+   "codigo": "1102",
+   "departamento": "11",
+   "nombre": "Champerico",
+   "lat": 14.291944,
+   "lon": -91.913055,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1103",
+   "departamento": "11",
+   "nombre": "El Asintal",
+   "lat": 14.595583,
+   "lon": -91.726395,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1104",
+   "departamento": "11",
+   "nombre": "Nuevo San Carlos",
+   "lat": 14.592863,
+   "lon": -91.693737,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1105",
+   "departamento": "11",
+   "nombre": "San Andrés Villa Seca",
+   "lat": 14.577637,
+   "lon": -91.585971,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1106",
+   "departamento": "11",
+   "nombre": "San Felipe",
+   "lat": 14.624153,
+   "lon": -91.596524,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1107",
+   "departamento": "11",
+   "nombre": "San Martín Zapotitlán",
+   "lat": 14.607755,
+   "lon": -91.606939,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1108",
+   "departamento": "11",
+   "nombre": "San Sebastián",
+   "lat": 14.561667,
+   "lon": -91.648611,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1109",
+   "departamento": "11",
+   "nombre": "Santa Cruz Muluá",
+   "lat": 14.581111,
+   "lon": -91.623889,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1201",
+   "departamento": "12",
+   "nombre": "San Marcos",
+   "lat": 14.961111,
+   "lon": -91.795556,
+   "cabecera_departamental": true,
+   "aproximada": false
+  },
+  {
+   "codigo": "1202",
+   "departamento": "12",
+   "nombre": "Ayutla",
+   "lat": 14.6775,
+   "lon": -92.140556,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1203",
+   "departamento": "12",
+   "nombre": "Catarina",
+   "lat": 14.853052,
+   "lon": -92.076997,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1204",
+   "departamento": "12",
+   "nombre": "Comitancillo",
+   "lat": 15.088888,
+   "lon": -91.748611,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1205",
+   "departamento": "12",
+   "nombre": "Concepción Tutuapa",
+   "lat": 15.240278,
+   "lon": -91.843333,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1206",
+   "departamento": "12",
+   "nombre": "El Quetzal",
+   "lat": 14.768726,
+   "lon": -91.816799,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1207",
+   "departamento": "12",
+   "nombre": "El Tumbador",
+   "lat": 14.862501,
+   "lon": -91.935,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1208",
+   "departamento": "12",
+   "nombre": "Esquipulas Palo Gordo",
+   "lat": 14.941182,
+   "lon": -91.824824,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1209",
+   "departamento": "12",
+   "nombre": "Ixchiguán",
+   "lat": 15.162777,
+   "lon": -91.933334,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1210",
+   "departamento": "12",
+   "nombre": "La Blanca",
+   "lat": 14.578,
+   "lon": -92.142,
+   "cabecera_departamental": false,
+   "aproximada": true
+  },
+  {
+   "codigo": "1211",
+   "departamento": "12",
+   "nombre": "La Reforma",
+   "lat": 14.798611,
+   "lon": -91.82,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1212",
+   "departamento": "12",
+   "nombre": "Malacatán",
+   "lat": 14.908334,
+   "lon": -92.0625,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1213",
+   "departamento": "12",
+   "nombre": "Nuevo Progreso",
+   "lat": 14.790278,
+   "lon": -91.919445,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1214",
+   "departamento": "12",
+   "nombre": "Ocós",
+   "lat": 14.509722,
+   "lon": -92.190556,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1215",
+   "departamento": "12",
+   "nombre": "Pajapita",
+   "lat": 14.721945,
+   "lon": -92.035,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1216",
+   "departamento": "12",
+   "nombre": "Río Blanco",
+   "lat": 15.036111,
+   "lon": -91.684722,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1217",
+   "departamento": "12",
+   "nombre": "San Antonio Sacatepéquez",
+   "lat": 14.961089,
+   "lon": -91.731389,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1218",
+   "departamento": "12",
+   "nombre": "San Cristóbal Cucho",
+   "lat": 14.90416,
+   "lon": -91.780657,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1219",
+   "departamento": "12",
+   "nombre": "San José El Rodeo",
+   "lat": 14.913889,
+   "lon": -91.975833,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1220",
+   "departamento": "12",
+   "nombre": "San José Ojetenam",
+   "lat": 15.233122,
+   "lon": -91.971634,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1221",
+   "departamento": "12",
+   "nombre": "San Lorenzo",
+   "lat": 15.029641,
+   "lon": -91.734811,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1222",
+   "departamento": "12",
+   "nombre": "San Miguel Ixtahuacán",
+   "lat": 15.270833,
+   "lon": -91.748611,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1223",
+   "departamento": "12",
+   "nombre": "San Pablo",
+   "lat": 14.932206,
+   "lon": -92.004716,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1224",
+   "departamento": "12",
+   "nombre": "San Pedro Sacatepéquez",
+   "lat": 14.965104,
+   "lon": -91.777588,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1225",
+   "departamento": "12",
+   "nombre": "San Rafael Pie de la Cuesta",
+   "lat": 14.930881,
+   "lon": -91.912592,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1226",
+   "departamento": "12",
+   "nombre": "Sibinal",
+   "lat": 15.148424,
+   "lon": -92.047513,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1227",
+   "departamento": "12",
+   "nombre": "Sipacapa",
+   "lat": 15.211123,
+   "lon": -91.634103,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1228",
+   "departamento": "12",
+   "nombre": "Tacaná",
+   "lat": 15.240278,
+   "lon": -92.067778,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1229",
+   "departamento": "12",
+   "nombre": "Tajumulco",
+   "lat": 15.083389,
+   "lon": -91.922218,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1230",
+   "departamento": "12",
+   "nombre": "Tejutla",
+   "lat": 15.1225,
+   "lon": -91.805278,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1301",
+   "departamento": "13",
+   "nombre": "Huehuetenango",
+   "lat": 15.320555,
+   "lon": -91.470278,
+   "cabecera_departamental": true,
+   "aproximada": false
+  },
+  {
+   "codigo": "1302",
+   "departamento": "13",
+   "nombre": "Aguacatán",
+   "lat": 15.341433,
+   "lon": -91.313882,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1303",
+   "departamento": "13",
+   "nombre": "Chiantla",
+   "lat": 15.354166,
+   "lon": -91.457778,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1304",
+   "departamento": "13",
+   "nombre": "Colotenango",
+   "lat": 15.404167,
+   "lon": -91.713889,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1305",
+   "departamento": "13",
+   "nombre": "Concepción Huista",
+   "lat": 15.625,
+   "lon": -91.665556,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1306",
+   "departamento": "13",
+   "nombre": "Cuilco",
+   "lat": 15.406945,
+   "lon": -91.945833,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1307",
+   "departamento": "13",
+   "nombre": "Jacaltenango",
+   "lat": 15.666667,
+   "lon": -91.7125,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1308",
+   "departamento": "13",
+   "nombre": "La Democracia",
+   "lat": 15.627417,
+   "lon": -91.887431,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1309",
+   "departamento": "13",
+   "nombre": "La Libertad",
+   "lat": 15.512778,
+   "lon": -91.868889,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1310",
+   "departamento": "13",
+   "nombre": "Malacatancito",
+   "lat": 15.247066,
+   "lon": -91.496955,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1311",
+   "departamento": "13",
+   "nombre": "Nentón",
+   "lat": 15.798845,
+   "lon": -91.755647,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1312",
+   "departamento": "13",
+   "nombre": "Petatán",
+   "lat": 15.64,
+   "lon": -91.7,
+   "cabecera_departamental": false,
+   "aproximada": true
+  },
+  {
+   "codigo": "1313",
+   "departamento": "13",
+   "nombre": "San Antonio Huista",
+   "lat": 15.651111,
+   "lon": -91.770833,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1314",
+   "departamento": "13",
+   "nombre": "San Gaspar Ixchil",
+   "lat": 15.387635,
+   "lon": -91.728674,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1315",
+   "departamento": "13",
+   "nombre": "San Ildefonso Ixtahuacán",
+   "lat": 15.416667,
+   "lon": -91.769445,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1316",
+   "departamento": "13",
+   "nombre": "San Juan Atitán",
+   "lat": 15.441787,
+   "lon": -91.633429,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1317",
+   "departamento": "13",
+   "nombre": "San Juan Ixcoy",
+   "lat": 15.598742,
+   "lon": -91.44368,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1318",
+   "departamento": "13",
+   "nombre": "San Mateo Ixtatán",
+   "lat": 15.829802,
+   "lon": -91.47652,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1319",
+   "departamento": "13",
+   "nombre": "San Miguel Acatán",
+   "lat": 15.703611,
+   "lon": -91.598889,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1320",
+   "departamento": "13",
+   "nombre": "San Pedro Nécta",
+   "lat": 15.49,
+   "lon": -91.765556,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1321",
+   "departamento": "13",
+   "nombre": "San Pedro Soloma",
+   "lat": 15.65771,
+   "lon": -91.429849,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1322",
+   "departamento": "13",
+   "nombre": "San Rafael La Independencia",
+   "lat": 15.701666,
+   "lon": -91.535556,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1323",
+   "departamento": "13",
+   "nombre": "San Rafael Pétzal",
+   "lat": 15.403647,
+   "lon": -91.665695,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1324",
+   "departamento": "13",
+   "nombre": "San Sebastián Coatán",
+   "lat": 15.734999,
+   "lon": -91.563056,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1325",
+   "departamento": "13",
+   "nombre": "San Sebastián Huehuetenango",
+   "lat": 15.386944,
+   "lon": -91.615,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1326",
+   "departamento": "13",
+   "nombre": "Santa Ana Huista",
+   "lat": 15.678008,
+   "lon": -91.819789,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1327",
+   "departamento": "13",
+   "nombre": "Santa Bárbara",
+   "lat": 15.313852,
+   "lon": -91.634076,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1328",
+   "departamento": "13",
+   "nombre": "Santa Cruz Barillas",
+   "lat": 15.801389,
+   "lon": -91.3125,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1329",
+   "departamento": "13",
+   "nombre": "Santa Eulalia",
+   "lat": 15.732347,
+   "lon": -91.456846,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1330",
+   "departamento": "13",
+   "nombre": "Santiago Chimaltenango",
+   "lat": 15.476454,
+   "lon": -91.696991,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1331",
+   "departamento": "13",
+   "nombre": "Tectitán",
+   "lat": 15.305556,
+   "lon": -92.06,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1332",
+   "departamento": "13",
+   "nombre": "Todos Santos Cuchumatán",
+   "lat": 15.508889,
+   "lon": -91.604722,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1333",
+   "departamento": "13",
+   "nombre": "Unión Cantinil",
+   "lat": 15.52,
+   "lon": -91.68,
+   "cabecera_departamental": false,
+   "aproximada": true
+  },
+  {
+   "codigo": "1401",
+   "departamento": "14",
+   "nombre": "Santa Cruz del Quiché",
+   "lat": 15.029445,
+   "lon": -91.149166,
+   "cabecera_departamental": true,
+   "aproximada": false
+  },
+  {
+   "codigo": "1402",
+   "departamento": "14",
+   "nombre": "Canillá",
+   "lat": 15.166642,
+   "lon": -90.85117,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1403",
+   "departamento": "14",
+   "nombre": "Chajul",
+   "lat": 15.484166,
+   "lon": -91.036389,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1404",
+   "departamento": "14",
+   "nombre": "Chicamán",
+   "lat": 15.346566,
+   "lon": -90.799837,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1405",
+   "departamento": "14",
+   "nombre": "Chiché",
+   "lat": 15.009444,
+   "lon": -91.066389,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1406",
+   "departamento": "14",
+   "nombre": "Chinique",
+   "lat": 15.041184,
+   "lon": -91.024815,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1407",
+   "departamento": "14",
+   "nombre": "Cunén",
+   "lat": 15.336111,
+   "lon": -91.026944,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1408",
+   "departamento": "14",
+   "nombre": "Ixcán",
+   "lat": 15.932149,
+   "lon": -90.739077,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1409",
+   "departamento": "14",
+   "nombre": "Joyabaj",
+   "lat": 14.993056,
+   "lon": -90.807222,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1410",
+   "departamento": "14",
+   "nombre": "Nebaj",
+   "lat": 15.405594,
+   "lon": -91.147344,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1411",
+   "departamento": "14",
+   "nombre": "Pachalum",
+   "lat": 14.924655,
+   "lon": -90.663429,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1412",
+   "departamento": "14",
+   "nombre": "Patzité",
+   "lat": 14.962683,
+   "lon": -91.208113,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1413",
+   "departamento": "14",
+   "nombre": "Sacapulas",
+   "lat": 15.286489,
+   "lon": -91.089606,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1414",
+   "departamento": "14",
+   "nombre": "San Andrés Sajcabajá",
+   "lat": 15.175,
+   "lon": -90.942222,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1415",
+   "departamento": "14",
+   "nombre": "San Antonio Ilotenango",
+   "lat": 15.054091,
+   "lon": -91.229681,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1416",
+   "departamento": "14",
+   "nombre": "San Bartolomé Jocotenango",
+   "lat": 15.190833,
+   "lon": -91.077778,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1417",
+   "departamento": "14",
+   "nombre": "San Juan Cotzal",
+   "lat": 15.433167,
+   "lon": -91.035609,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1418",
+   "departamento": "14",
+   "nombre": "San Pedro Jocopilas",
+   "lat": 15.094166,
+   "lon": -91.151667,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1419",
+   "departamento": "14",
+   "nombre": "Santo Tomás Chichicastenango",
+   "lat": 14.941944,
+   "lon": -91.112222,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1420",
+   "departamento": "14",
+   "nombre": "Uspantán",
+   "lat": 15.346944,
+   "lon": -90.870555,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1421",
+   "departamento": "14",
+   "nombre": "Zacualpa",
+   "lat": 15.026498,
+   "lon": -90.877127,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1501",
+   "departamento": "15",
+   "nombre": "Salamá",
+   "lat": 15.102368,
+   "lon": -90.316576,
+   "cabecera_departamental": true,
+   "aproximada": false
+  },
+  {
+   "codigo": "1502",
+   "departamento": "15",
+   "nombre": "Cubulco",
+   "lat": 15.106277,
+   "lon": -90.627194,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1503",
+   "departamento": "15",
+   "nombre": "Granados",
+   "lat": 14.915585,
+   "lon": -90.52184,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1504",
+   "departamento": "15",
+   "nombre": "Purulhá",
+   "lat": 15.237084,
+   "lon": -90.235096,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1505",
+   "departamento": "15",
+   "nombre": "Rabinal",
+   "lat": 15.08468,
+   "lon": -90.489941,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1506",
+   "departamento": "15",
+   "nombre": "San Jerónimo",
+   "lat": 15.061435,
+   "lon": -90.239479,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1507",
+   "departamento": "15",
+   "nombre": "San Miguel Chicaj",
+   "lat": 15.095197,
+   "lon": -90.395195,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1508",
+   "departamento": "15",
+   "nombre": "Santa Cruz el Chol",
+   "lat": 14.96662,
+   "lon": -90.483103,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1601",
+   "departamento": "16",
+   "nombre": "Cobán",
+   "lat": 15.469,
+   "lon": -90.372315,
+   "cabecera_departamental": true,
+   "aproximada": false
+  },
+  {
+   "codigo": "1602",
+   "departamento": "16",
+   "nombre": "Chahal",
+   "lat": 15.762898,
+   "lon": -89.5569,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1603",
+   "departamento": "16",
+   "nombre": "Chisec",
+   "lat": 15.812299,
+   "lon": -90.288791,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1604",
+   "departamento": "16",
+   "nombre": "Fray Bartolomé de las Casas",
+   "lat": 15.805659,
+   "lon": -89.873462,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1605",
+   "departamento": "16",
+   "nombre": "Lanquín",
+   "lat": 15.573889,
+   "lon": -89.980833,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1606",
+   "departamento": "16",
+   "nombre": "Panzós",
+   "lat": 15.398993,
+   "lon": -89.642902,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1607",
+   "departamento": "16",
+   "nombre": "Raxruhá",
+   "lat": 15.866,
+   "lon": -90.042,
+   "cabecera_departamental": false,
+   "aproximada": true
+  },
+  {
+   "codigo": "1608",
+   "departamento": "16",
+   "nombre": "San Cristóbal Verapaz",
+   "lat": 15.364834,
+   "lon": -90.476929,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1609",
+   "departamento": "16",
+   "nombre": "San Juan Chamelco",
+   "lat": 15.422124,
+   "lon": -90.328059,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1610",
+   "departamento": "16",
+   "nombre": "San Pedro Carchá",
+   "lat": 15.474802,
+   "lon": -90.309351,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1611",
+   "departamento": "16",
+   "nombre": "Santa Catalina La Tinta",
+   "lat": 15.310084,
+   "lon": -89.883931,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1612",
+   "departamento": "16",
+   "nombre": "Santa Cruz Verapaz",
+   "lat": 15.373903,
+   "lon": -90.428825,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1613",
+   "departamento": "16",
+   "nombre": "Santa María Cahabón",
+   "lat": 15.606667,
+   "lon": -89.811667,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1614",
+   "departamento": "16",
+   "nombre": "Senahú",
+   "lat": 15.415834,
+   "lon": -89.822222,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1615",
+   "departamento": "16",
+   "nombre": "Tactic",
+   "lat": 15.317256,
+   "lon": -90.352145,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1616",
+   "departamento": "16",
+   "nombre": "Tamahú",
+   "lat": 15.306944,
+   "lon": -90.233889,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1617",
+   "departamento": "16",
+   "nombre": "Tucurú",
+   "lat": 15.29296,
+   "lon": -90.118669,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1701",
+   "departamento": "17",
+   "nombre": "Flores",
+   "lat": 16.929166,
+   "lon": -89.890833,
+   "cabecera_departamental": true,
+   "aproximada": false
+  },
+  {
+   "codigo": "1702",
+   "departamento": "17",
+   "nombre": "Dolores",
+   "lat": 16.515344,
+   "lon": -89.414631,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1703",
+   "departamento": "17",
+   "nombre": "El Chal",
+   "lat": 16.64,
+   "lon": -89.65,
+   "cabecera_departamental": false,
+   "aproximada": true
+  },
+  {
+   "codigo": "1704",
+   "departamento": "17",
+   "nombre": "La Libertad",
+   "lat": 16.788125,
+   "lon": -90.116475,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1705",
+   "departamento": "17",
+   "nombre": "Las Cruces",
+   "lat": 16.62,
+   "lon": -90.24,
+   "cabecera_departamental": false,
+   "aproximada": true
+  },
+  {
+   "codigo": "1706",
+   "departamento": "17",
+   "nombre": "Melchor de Mencos",
+   "lat": 17.055019,
+   "lon": -89.153249,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1707",
+   "departamento": "17",
+   "nombre": "Poptún",
+   "lat": 16.328719,
+   "lon": -89.421672,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1708",
+   "departamento": "17",
+   "nombre": "San Andrés",
+   "lat": 16.966536,
+   "lon": -89.910037,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1709",
+   "departamento": "17",
+   "nombre": "San Benito",
+   "lat": 16.923426,
+   "lon": -89.903754,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1710",
+   "departamento": "17",
+   "nombre": "San Francisco",
+   "lat": 16.798889,
+   "lon": -89.935278,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1711",
+   "departamento": "17",
+   "nombre": "San José",
+   "lat": 16.981851,
+   "lon": -89.899225,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1712",
+   "departamento": "17",
+   "nombre": "San Luis",
+   "lat": 16.197661,
+   "lon": -89.440698,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1713",
+   "departamento": "17",
+   "nombre": "Santa Ana",
+   "lat": 16.808091,
+   "lon": -89.824574,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1714",
+   "departamento": "17",
+   "nombre": "Sayaxché",
+   "lat": 16.529445,
+   "lon": -90.189722,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1801",
+   "departamento": "18",
+   "nombre": "Puerto Barrios",
+   "lat": 15.723999,
+   "lon": -88.59496,
+   "cabecera_departamental": true,
+   "aproximada": false
+  },
+  {
+   "codigo": "1802",
+   "departamento": "18",
+   "nombre": "El Estor",
+   "lat": 15.523611,
+   "lon": -89.336111,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1803",
+   "departamento": "18",
+   "nombre": "Livingston",
+   "lat": 15.826666,
+   "lon": -88.750556,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1804",
+   "departamento": "18",
+   "nombre": "Los Amates",
+   "lat": 15.253334,
+   "lon": -89.095278,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1805",
+   "departamento": "18",
+   "nombre": "Morales",
+   "lat": 15.475,
+   "lon": -88.827778,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1901",
+   "departamento": "19",
+   "nombre": "Zacapa",
+   "lat": 14.9725,
+   "lon": -89.528334,
+   "cabecera_departamental": true,
+   "aproximada": false
+  },
+  {
+   "codigo": "1902",
+   "departamento": "19",
+   "nombre": "Cabañas",
+   "lat": 14.933611,
+   "lon": -89.796111,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1903",
+   "departamento": "19",
+   "nombre": "Estanzuela",
+   "lat": 14.998612,
+   "lon": -89.573611,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1904",
+   "departamento": "19",
+   "nombre": "Gualán",
+   "lat": 15.113563,
+   "lon": -89.359486,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1905",
+   "departamento": "19",
+   "nombre": "Huité",
+   "lat": 14.925278,
+   "lon": -89.717222,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1906",
+   "departamento": "19",
+   "nombre": "La Unión",
+   "lat": 14.964938,
+   "lon": -89.289774,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1907",
+   "departamento": "19",
+   "nombre": "Río Hondo",
+   "lat": 15.043334,
+   "lon": -89.585,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1908",
+   "departamento": "19",
+   "nombre": "San Diego",
+   "lat": 14.788727,
+   "lon": -89.773777,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1909",
+   "departamento": "19",
+   "nombre": "San Jorge",
+   "lat": 14.93,
+   "lon": -89.59,
+   "cabecera_departamental": false,
+   "aproximada": true
+  },
+  {
+   "codigo": "1910",
+   "departamento": "19",
+   "nombre": "Teculután",
+   "lat": 14.987778,
+   "lon": -89.718334,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "1911",
+   "departamento": "19",
+   "nombre": "Usumatlán",
+   "lat": 14.947585,
+   "lon": -89.775095,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "2001",
+   "departamento": "20",
+   "nombre": "Chiquimula",
+   "lat": 14.799328,
+   "lon": -89.543539,
+   "cabecera_departamental": true,
+   "aproximada": false
+  },
+  {
+   "codigo": "2002",
+   "departamento": "20",
+   "nombre": "Camotán",
+   "lat": 14.820277,
+   "lon": -89.373334,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "2003",
+   "departamento": "20",
+   "nombre": "Concepción Las Minas",
+   "lat": 14.520467,
+   "lon": -89.455322,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "2004",
+   "departamento": "20",
+   "nombre": "Esquipulas",
+   "lat": 14.561945,
+   "lon": -89.351389,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "2005",
+   "departamento": "20",
+   "nombre": "Ipala",
+   "lat": 14.619445,
+   "lon": -89.619444,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "2006",
+   "departamento": "20",
+   "nombre": "Jocotán",
+   "lat": 14.819445,
+   "lon": -89.390278,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "2007",
+   "departamento": "20",
+   "nombre": "Olopa",
+   "lat": 14.692376,
+   "lon": -89.348052,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "2008",
+   "departamento": "20",
+   "nombre": "Quetzaltepeque",
+   "lat": 14.635322,
+   "lon": -89.441266,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "2009",
+   "departamento": "20",
+   "nombre": "San Jacinto",
+   "lat": 14.676455,
+   "lon": -89.506556,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "2010",
+   "departamento": "20",
+   "nombre": "San José la Arada",
+   "lat": 14.721532,
+   "lon": -89.584933,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "2011",
+   "departamento": "20",
+   "nombre": "San Juan Ermita",
+   "lat": 14.763055,
+   "lon": -89.430556,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "2101",
+   "departamento": "21",
+   "nombre": "Jalapa",
+   "lat": 14.633889,
+   "lon": -89.981111,
+   "cabecera_departamental": true,
+   "aproximada": false
+  },
+  {
+   "codigo": "2102",
+   "departamento": "21",
+   "nombre": "Mataquescuintla",
+   "lat": 14.526111,
+   "lon": -90.187222,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "2103",
+   "departamento": "21",
+   "nombre": "Monjas",
+   "lat": 14.505,
+   "lon": -89.875834,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "2104",
+   "departamento": "21",
+   "nombre": "San Carlos Alzatate",
+   "lat": 14.496667,
+   "lon": -90.058333,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "2105",
+   "departamento": "21",
+   "nombre": "San Luis Jilotepeque",
+   "lat": 14.643333,
+   "lon": -89.729722,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "2106",
+   "departamento": "21",
+   "nombre": "San Manuel Chaparrón",
+   "lat": 14.517669,
+   "lon": -89.768312,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "2107",
+   "departamento": "21",
+   "nombre": "San Pedro Pinula",
+   "lat": 14.662222,
+   "lon": -89.846389,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "2201",
+   "departamento": "22",
+   "nombre": "Jutiapa",
+   "lat": 14.282778,
+   "lon": -89.8925,
+   "cabecera_departamental": true,
+   "aproximada": false
+  },
+  {
+   "codigo": "2202",
+   "departamento": "22",
+   "nombre": "Agua Blanca",
+   "lat": 14.496667,
+   "lon": -89.648889,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "2203",
+   "departamento": "22",
+   "nombre": "Asunción Mita",
+   "lat": 14.332777,
+   "lon": -89.709445,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "2204",
+   "departamento": "22",
+   "nombre": "Atescatempa",
+   "lat": 14.174999,
+   "lon": -89.741111,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "2205",
+   "departamento": "22",
+   "nombre": "Comapa",
+   "lat": 14.110837,
+   "lon": -89.912477,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "2206",
+   "departamento": "22",
+   "nombre": "Conguaco",
+   "lat": 14.048056,
+   "lon": -90.033334,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "2207",
+   "departamento": "22",
+   "nombre": "El Adelanto",
+   "lat": 14.168846,
+   "lon": -89.827901,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "2208",
+   "departamento": "22",
+   "nombre": "El Progreso",
+   "lat": 14.355,
+   "lon": -89.848889,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "2209",
+   "departamento": "22",
+   "nombre": "Jalpatagua",
+   "lat": 14.135459,
+   "lon": -90.008255,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "2210",
+   "departamento": "22",
+   "nombre": "Jerez",
+   "lat": 14.090454,
+   "lon": -89.750417,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "2211",
+   "departamento": "22",
+   "nombre": "Moyuta",
+   "lat": 14.037778,
+   "lon": -90.083334,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "2212",
+   "departamento": "22",
+   "nombre": "Pasaco",
+   "lat": 13.978333,
+   "lon": -90.205,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "2213",
+   "departamento": "22",
+   "nombre": "Quesada",
+   "lat": 14.271111,
+   "lon": -90.038056,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "2214",
+   "departamento": "22",
+   "nombre": "San José Acatempa",
+   "lat": 14.262222,
+   "lon": -90.129445,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "2215",
+   "departamento": "22",
+   "nombre": "Santa Catarina Mita",
+   "lat": 14.450556,
+   "lon": -89.742778,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "2216",
+   "departamento": "22",
+   "nombre": "Yupiltepeque",
+   "lat": 14.192292,
+   "lon": -89.791227,
+   "cabecera_departamental": false,
+   "aproximada": false
+  },
+  {
+   "codigo": "2217",
+   "departamento": "22",
+   "nombre": "Zapotitlán",
+   "lat": 14.137258,
+   "lon": -89.824569,
+   "cabecera_departamental": false,
+   "aproximada": false
+  }
+ ]
+}
