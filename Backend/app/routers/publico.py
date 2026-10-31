@@ -1,10 +1,12 @@
 """Módulo público: el ciudadano reporta y da seguimiento a su emergencia."""
-from fastapi import APIRouter, Depends, HTTPException, Query
+from fastapi import APIRouter, Depends, HTTPException, Query, Request
 from sqlalchemy import func
 from sqlalchemy.orm import Session
 
 from app.catalogos import ESTADOS_INCIDENTE, PRIORIDADES, TIPOS_INCIDENTE, TIPOS_RECURSO, ZONAS_CAPITAL
-from app.database import get_db
+from app.config import settings
+from app.database import escapar_like, get_db
+from app.ratelimit import CONSULTAS_SEGUIMIENTO, REPORTES_PUBLICOS, ip_cliente
 from app.geografia import DEPARTAMENTOS, MUNICIPIO_CAPITAL, MUNICIPIOS, localizar, normalizar, zonas_de
 from app.models import IncidentModel, PlaceModel
 from app.schemas import IncidentCreate
@@ -72,13 +74,17 @@ def buscar_lugares(
     consulta = db.query(PlaceModel).filter(PlaceModel.municipality_code == municipality)
     texto = q.strip()
     if texto:
-        consulta = consulta.filter(func.lower(PlaceModel.name).like(f"%{texto.lower()}%"))
+        consulta = consulta.filter(func.lower(PlaceModel.name).like(f"%{escapar_like(texto.lower())}%", escape="\\"))
     lugares = consulta.order_by(PlaceModel.name).limit(limit).all()
     return [{"id": p.id, "name": p.name, "category": p.category} for p in lugares]
 
 
 @router.post("/incidents", status_code=201)
-def registrar_incidente_publico(datos: IncidentCreate, db: Session = Depends(get_db)):
+def registrar_incidente_publico(datos: IncidentCreate, request: Request, db: Session = Depends(get_db)):
+    # Anti-abuso: límite por conexión, y el ciudadano no puede escalar la prioridad por sí mismo
+    # (el operador la reclasifica al verificar el reporte).
+    REPORTES_PUBLICOS.exigir(f"ip:{ip_cliente(request)}")
+    datos.priority = min(datos.priority, settings.PUBLIC_MAX_PRIORITY)
     inc = crear_incidente(db, datos, source="public")
     db.commit()
     db.refresh(inc)
@@ -89,7 +95,8 @@ def registrar_incidente_publico(datos: IncidentCreate, db: Session = Depends(get
 
 
 @router.get("/incidents/{incident_id}")
-def seguimiento(incident_id: str, db: Session = Depends(get_db)):
+def seguimiento(incident_id: str, request: Request, db: Session = Depends(get_db)):
+    CONSULTAS_SEGUIMIENTO.exigir(f"ip:{ip_cliente(request)}")  # frena el recorrido de códigos
     inc = db.get(IncidentModel, incident_id.strip().upper())
     if inc is None:
         raise HTTPException(status_code=404, detail="No se encontró un reporte con ese código.")

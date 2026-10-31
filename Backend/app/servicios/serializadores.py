@@ -187,6 +187,7 @@ def usuario(u: UserModel) -> dict:
         "id": u.id,
         "username": u.username,
         "full_name": u.full_name,
+        "email": u.email,
         "role": u.role,
         "role_label": ROLES[u.role]["nombre"] if u.role in ROLES else u.role,
         # Permisos efectivos por módulo: 0 sin acceso, 1 ver, 2 editar.

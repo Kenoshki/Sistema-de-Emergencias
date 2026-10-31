@@ -6,6 +6,9 @@ on:
     branches: [main]
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   backend:
     name: Backend (pytest)
@@ -22,6 +25,8 @@ jobs:
           cache-dependency-path: Backend/requirements.txt
       - run: pip install -r requirements.txt
       - run: python -m pytest -q
+      - name: Auditoría de dependencias
+        run: pip install pip-audit && pip-audit -r requirements.txt
 
   frontend:
     name: Frontend (build)
@@ -38,3 +43,5 @@ jobs:
           cache-dependency-path: Frontend/package-lock.json
       - run: npm ci
       - run: npm run build
+      - name: Auditoría de dependencias
+        run: npm audit --omit=dev --audit-level=high

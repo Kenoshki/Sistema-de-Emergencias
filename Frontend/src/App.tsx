@@ -10,6 +10,7 @@ import { Flota } from './pages/admin/Flota'
 import { IncidenteDetalle } from './pages/admin/IncidenteDetalle'
 import { Incidentes } from './pages/admin/Incidentes'
 import { Login } from './pages/admin/Login'
+import { RecuperarContrasena } from './pages/admin/RecuperarContrasena'
 import { Panel } from './pages/admin/Panel'
 import { RedVial } from './pages/admin/RedVial'
 import { Reportes } from './pages/admin/Reportes'
@@ -21,7 +22,9 @@ function Rutas() {
   const ruta = useRuta()
   const { usuario, verificando, puede, esAdmin } = useAuth()
   const limpia = ruta.split('?')[0]
-  const enAdmin = limpia.startsWith('/admin') && limpia !== '/admin/login'
+  const restablecer = coincide('/admin/restablecer/:token', ruta)
+  const enRecuperacion = limpia === '/admin/recuperar' || restablecer !== null
+  const enAdmin = limpia.startsWith('/admin') && limpia !== '/admin/login' && !enRecuperacion
 
   // Proteger el área administrativa
   useEffect(() => {
@@ -32,6 +35,7 @@ function Rutas() {
   // ---- Público
   const seg = coincide('/seguimiento/:codigo', ruta)
   if (seg) return <Seguimiento codigo={seg.codigo} />
+  if (enRecuperacion) return <RecuperarContrasena token={restablecer?.token ?? null} />
   if (limpia === '/admin/login') return <Login />
   if (!enAdmin) return <PortalPublico />
 

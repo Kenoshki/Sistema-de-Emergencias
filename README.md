@@ -99,7 +99,8 @@ npm run dev
 Abra http://localhost:5173
 
 - **Portal ciudadano:** página principal.
-- **Centro de despacho:** botón arriba a la derecha. Usuario `admin`, contraseña `1234password` (definidos en el `.env` del backend).
+- **Centro de despacho:** botón arriba a la derecha. Usuario y contraseña del administrador: los definidos en `DEFAULT_ADMIN_USER` / `DEFAULT_ADMIN_PASS` del `.env` del backend.
+  ¿Olvidó la contraseña? Use «¿Olvidó su contraseña?» en el inicio de sesión (requiere un correo en la cuenta y un proveedor de correo; vea `RAILWAY.md`).
   Para probar los perfiles también se crean `op.incidentes`, `op.flota` y `op.red`, con contraseña `operador2026` (`DEMO_USERS_PASS`).
 
 > También puede usar `iniciar_backend.bat` e `iniciar_frontend.bat` después de la primera instalación.
@@ -242,13 +243,20 @@ admiten el tráfico de un sistema nacional. Ambos se cambian en `Frontend/.env`,
 `osrm/iniciar_osrm.bat` monta un OSRM propio con el mapa de Guatemala usando Docker. `osrm/LEEME.md`
 explica cómo instalarlo en un servidor y qué opciones hay para las teselas.
 
+> Despliegue en producción (Railway): vea [`RAILWAY.md`](RAILWAY.md).
+
 ## Variables del backend (`.env`)
 
 | Variable | Para qué sirve |
 |---|---|
 | `DATABASE_URL` | Conexión a MySQL (o `sqlite:///./emergencias.db`) |
 | `DEFAULT_ADMIN_USER` / `DEFAULT_ADMIN_PASS` | Administrador que se crea la primera vez |
-| `JWT_SECRET` | Clave para firmar las sesiones; cámbiela |
+| `JWT_SECRET` | Clave para firmar las sesiones (32+ caracteres aleatorios). Con `DEBUG_MODE=False` el arranque falla si es la de ejemplo |
+| `DEBUG_MODE` | `True` solo en su equipo. `False` (valor por defecto) exige secretos propios, oculta `/docs` y activa HSTS |
+| `DEFAULT_ADMIN_EMAIL` | Correo del administrador, para recuperar la contraseña |
+| `FRONTEND_URL` | URL pública del frontend (enlace del correo de recuperación) |
+| `RESEND_API_KEY` / `SMTP_HOST`… | Proveedor de correo para recuperar contraseñas |
+| `PUBLIC_MAX_PRIORITY` | Prioridad máxima que puede declarar un ciudadano (3 por defecto) |
 | `CORS_ORIGINS` | Direcciones del frontend permitidas |
 | `AUTO_DISPATCH` | `True` para asignar unidades automáticamente al recibir un reporte |
 | `SEED_DEMO_DATA` | `True` para cargar 60 días de historial simulado y los operadores de demostración |

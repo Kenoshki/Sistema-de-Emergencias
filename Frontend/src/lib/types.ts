@@ -166,6 +166,7 @@ export interface Usuario {
   id: number
   username: string
   full_name: string
+  email: string | null
   role: string   // admin | incidentes | flota | red_vial | operator
   role_label: string
   is_active: boolean

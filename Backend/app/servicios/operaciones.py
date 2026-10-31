@@ -10,6 +10,7 @@ transacción al final, así una operación es "todo o nada".
 from __future__ import annotations
 
 import json
+import secrets
 from collections import Counter
 from datetime import datetime
 
@@ -39,6 +40,9 @@ from app.schemas import IncidentCreate
 from app.servicios.serializadores import leer_json
 
 
+_ALFABETO_CODIGO = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"  # sin 0/O/1/I para dictarlo por teléfono
+
+
 class ErrorOperacion(Exception):
     """Error de regla de negocio (se responde como HTTP 400/409)."""
 
@@ -60,7 +64,11 @@ def registrar_evento(
 
 
 def generar_id_incidente(db: Session, fecha: datetime | None = None) -> str:
-    """Formato INC-AAAAMMDD-NNNN, consecutivo por día (sin colisiones)."""
+    """
+    Formato INC-AAAAMMDD-NNNN-XXXX: consecutivo por día más 4 caracteres aleatorios.
+    El sufijo hace que el código no se pueda adivinar recorriendo la secuencia
+    (el seguimiento ciudadano es público) y evita colisiones entre reportes simultáneos.
+    """
     fecha = fecha or datetime.now()
     prefijo = f"INC-{fecha:%Y%m%d}-"
     ultimo = (
@@ -69,8 +77,9 @@ def generar_id_incidente(db: Session, fecha: datetime | None = None) -> str:
         .order_by(IncidentModel.id.desc())
         .first()
     )
-    siguiente = int(ultimo[0].rsplit("-", 1)[1]) + 1 if ultimo else 1
-    return f"{prefijo}{siguiente:04d}"
+    siguiente = int(ultimo[0].split("-")[2]) + 1 if ultimo else 1
+    sufijo = "".join(secrets.choice(_ALFABETO_CODIGO) for _ in range(4))
+    return f"{prefijo}{siguiente:04d}-{sufijo}"
 
 
 def construir_red(db: Session) -> RedVial:
@@ -112,7 +121,8 @@ def _liberar_unidades(db: Session, inc: IncidentModel, mover_al_lugar: bool) -> 
 # ---------------------------------------------------------- crear / editar
 def crear_incidente(db: Session, data: IncidentCreate, source: str, username: str | None = None) -> IncidentModel:
     # La ubicación ya viene validada por el esquema (departamento, municipio y zona).
-    assert data.department_code and data.municipality_code
+    if not (data.department_code and data.municipality_code):
+        raise ErrorOperacion("Falta el departamento o el municipio del incidente.", 422)
     municipio, zona = data.municipality_code, data.zone
 
     lugar_nombre = data.place_name

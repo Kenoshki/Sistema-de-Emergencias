@@ -94,6 +94,27 @@ class NotaIncidente(BaseModel):
     detalle: str = Field(..., min_length=1, max_length=255)
 
 
+def _correo_valido(v: Optional[str]) -> Optional[str]:
+    if v is None:
+        return None
+    v = v.strip().lower()
+    if v == "":
+        return ""  # en UserUpdate vacío = quitar el correo
+    local, _, dominio = v.rpartition("@")
+    if not local or "." not in dominio or " " in v or len(v) > 120 or dominio.startswith(".") or dominio.endswith("."):
+        raise ValueError("Correo electrónico inválido.")
+    return v
+
+
+class OlvideContrasena(BaseModel):
+    identificador: str = Field(..., min_length=3, max_length=120, description="Usuario o correo")
+
+
+class RestablecerContrasena(BaseModel):
+    token: str = Field(..., min_length=20, max_length=200)
+    password: str = Field(..., min_length=8, max_length=128)
+
+
 class LoginRequest(BaseModel):
     username: str = Field(..., min_length=1, max_length=50)
     password: str = Field(..., min_length=1, max_length=128)
@@ -173,6 +194,7 @@ class UserCreate(BaseModel):
     username: str = Field(..., min_length=3, max_length=50, pattern=r"^[a-zA-Z0-9_.-]+$")
     password: str = Field(..., min_length=8, max_length=128)
     full_name: str = Field("", max_length=100)
+    email: Optional[str] = None
     role: str = "incidentes"
     # Ajustes por módulo sobre el perfil del rol ({"flota": 2, ...}); None = perfil del rol.
     permissions: Optional[dict[str, int]] = None
@@ -184,6 +206,11 @@ class UserCreate(BaseModel):
             raise ValueError(f"Rol inválido. Use: {', '.join(ROLES)}")
         return v
 
+    @field_validator("email")
+    @classmethod
+    def correo_valido(cls, v):
+        return _correo_valido(v) or None
+
     @field_validator("permissions")
     @classmethod
     def permisos_validos(cls, v):
@@ -192,6 +219,7 @@ class UserCreate(BaseModel):
 
 class UserUpdate(BaseModel):
     full_name: Optional[str] = Field(None, max_length=100)
+    email: Optional[str] = None  # "" = quitar el correo
     role: Optional[str] = None
     is_active: Optional[bool] = None
     password: Optional[str] = Field(None, min_length=8, max_length=128)
@@ -205,6 +233,11 @@ class UserUpdate(BaseModel):
         if v is not None and v not in ROLES:
             raise ValueError("Rol inválido.")
         return v
+
+    @field_validator("email")
+    @classmethod
+    def correo_valido(cls, v):
+        return _correo_valido(v)
 
     @field_validator("permissions")
     @classmethod

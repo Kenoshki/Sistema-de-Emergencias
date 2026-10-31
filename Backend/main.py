@@ -23,7 +23,8 @@ from app.servicios.operaciones import ErrorOperacion
 
 @asynccontextmanager
 async def ciclo_de_vida(app: FastAPI):
-    # Al arrancar: crear tablas y datos iniciales.
+    # Al arrancar: validar secretos, crear tablas y datos iniciales.
+    settings.validar()
     init_db()
     db = SessionLocal()
     try:
@@ -38,7 +39,24 @@ app = FastAPI(
     description="Coordinación de ambulancias, bomberos, policía y rescate con asignación automática por rutas más cortas.",
     version="2.0.0",
     lifespan=ciclo_de_vida,
+    # La documentación interactiva solo se publica en depuración (o con ENABLE_DOCS=true).
+    docs_url="/docs" if settings.ENABLE_DOCS else None,
+    redoc_url=None,
+    openapi_url="/openapi.json" if settings.ENABLE_DOCS else None,
 )
+
+
+@app.middleware("http")
+async def cabeceras_de_seguridad(request: Request, call_next):
+    respuesta = await call_next(request)
+    respuesta.headers.setdefault("X-Content-Type-Options", "nosniff")
+    respuesta.headers.setdefault("X-Frame-Options", "DENY")
+    respuesta.headers.setdefault("Referrer-Policy", "no-referrer")
+    respuesta.headers.setdefault("Cache-Control", "no-store")
+    if not settings.DEBUG_MODE:
+        respuesta.headers.setdefault("Strict-Transport-Security", "max-age=31536000; includeSubDomains")
+    return respuesta
+
 
 app.add_middleware(
     CORSMiddleware,
@@ -76,7 +94,7 @@ def salud():
 
 @app.get("/", include_in_schema=False)
 def raiz():
-    return {"sistema": "DWG EMS-05 REV A", "docs": "/docs"}
+    return {"sistema": "DWG EMS-05 REV A", "docs": "/docs" if settings.ENABLE_DOCS else None}
 
 
 if __name__ == "__main__":
@@ -84,4 +102,5 @@ if __name__ == "__main__":
 
     import uvicorn
 
-    uvicorn.run("main:app", host="0.0.0.0", port=int(os.getenv("PORT", "8000")), reload=settings.DEBUG_MODE)
+    uvicorn.run("main:app", host="0.0.0.0", port=int(os.getenv("PORT", "8000")), reload=settings.DEBUG_MODE,
+                proxy_headers=True, forwarded_allow_ips="*")

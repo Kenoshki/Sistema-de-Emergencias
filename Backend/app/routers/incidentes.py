@@ -6,7 +6,7 @@ from sqlalchemy import or_
 from sqlalchemy.orm import Session, selectinload
 
 from app.catalogos import ESTADOS_ACTIVOS
-from app.database import get_db
+from app.database import escapar_like, get_db
 from app.models import IncidentModel, UserModel
 from app.schemas import IncidentCreate, IncidentUpdate, NotaIncidente
 from app.permisos import EDITAR
@@ -47,9 +47,9 @@ def listar(
     if priority:
         consulta = consulta.filter(IncidentModel.priority == priority)
     if q:
-        patron = f"%{q.strip()}%"
-        consulta = consulta.filter(or_(IncidentModel.id.like(patron), IncidentModel.description.like(patron),
-                                       IncidentModel.address.like(patron), IncidentModel.place_name.like(patron)))
+        patron = f"%{escapar_like(q.strip()[:80])}%"
+        consulta = consulta.filter(or_(*(c.like(patron, escape="\\") for c in (
+            IncidentModel.id, IncidentModel.description, IncidentModel.address, IncidentModel.place_name))))
     total = consulta.count()
     filas = (
         consulta.order_by(IncidentModel.reported_at.desc())

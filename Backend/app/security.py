@@ -47,10 +47,22 @@ def verify_password(password: str, guardado: str) -> bool:
         return False
 
 
+# Hash de relleno: el login siempre calcula PBKDF2, exista o no el usuario (evita adivinar usuarios por el tiempo).
+HASH_RELLENO = hash_password(secrets.token_urlsafe(16))
+
+
+def hash_token(token: str) -> str:
+    return hashlib.sha256(token.encode("utf-8")).hexdigest()
+
+
+def hay_que_rotar_hash(guardado: str) -> bool:
+    return not guardado.startswith(f"pbkdf2_sha256${ITERACIONES}$")
+
+
 # ------------------------------------------------------------------- JWT
 def crear_token(user: UserModel) -> str:
     expira = datetime.now(timezone.utc) + timedelta(minutes=settings.JWT_EXPIRE_MINUTES)
-    payload = {"sub": user.username, "role": user.role, "exp": expira}
+    payload = {"sub": user.username, "role": user.role, "tv": user.token_version or 0, "exp": expira}
     return jwt.encode(payload, settings.JWT_SECRET, algorithm=settings.JWT_ALGORITHM)
 
 
@@ -76,7 +88,7 @@ def get_current_user(
         raise _no_autorizado("Token inválido.") from None
 
     user = db.query(UserModel).filter(UserModel.username == payload.get("sub")).first()
-    if user is None or not user.is_active:
+    if user is None or not user.is_active or payload.get("tv", 0) != (user.token_version or 0):
         raise _no_autorizado("Usuario no encontrado o desactivado.")
     return user
 

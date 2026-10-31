@@ -57,6 +57,10 @@ export function Login() {
           </Campo>
           {error && <Aviso>{error}</Aviso>}
           <Boton type="submit" cargando={enviando} className="w-full py-2.5">Entrar</Boton>
+          <button type="button" onClick={() => navegar('/admin/recuperar')}
+            className="block w-full text-center text-sm font-semibold text-route hover:underline">
+            ¿Olvidó su contraseña?
+          </button>
         </form>
       </div>
     </div>

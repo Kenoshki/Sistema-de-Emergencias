@@ -106,6 +106,10 @@ export const api = {
   login: (username: string, password: string) =>
     http.post<{ access_token: string; user: Usuario }>('/auth/login', { username, password }).then((r) => r.data),
   yo: () => http.get<Usuario>('/auth/me').then((r) => r.data),
+  olvideContrasena: (identificador: string) =>
+    http.post<{ message: string }>('/auth/forgot-password', { identificador }).then((r) => r.data),
+  restablecerContrasena: (token: string, password: string) =>
+    http.post<{ message: string }>('/auth/reset-password', { token, password }).then((r) => r.data),
 
   // ---- Incidentes
   incidentes: (params: Record<string, string | number | undefined>) =>
@@ -159,10 +163,10 @@ export const api = {
   // ---- Usuarios
   usuarios: () => http.get<Usuario[]>('/admin/users').then((r) => r.data),
   rolesUsuarios: () => http.get<CatalogoRoles>('/admin/users/roles').then((r) => r.data),
-  crearUsuario: (datos: { username: string; password: string; full_name: string; role: string; permissions?: Partial<Permisos> }) =>
+  crearUsuario: (datos: { username: string; password: string; full_name: string; email?: string; role: string; permissions?: Partial<Permisos> }) =>
     http.post<Usuario>('/admin/users', datos).then((r) => r.data),
   actualizarUsuario: (id: number, datos: {
-    full_name?: string; role?: string; is_active?: boolean; password?: string
+    full_name?: string; email?: string; role?: string; is_active?: boolean; password?: string
     permissions?: Partial<Permisos>; reset_permissions?: boolean
   }) => http.patch<Usuario>(`/admin/users/${id}`, datos).then((r) => r.data),
 }

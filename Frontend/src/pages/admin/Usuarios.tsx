@@ -55,7 +55,7 @@ export function Usuarios() {
                   <tr key={u.id} className={u.is_active ? '' : 'opacity-60'}>
                     <td className="px-4 py-2.5">
                       <strong>{u.username}</strong>
-                      <span className="block text-xs text-muted">{u.full_name}</span>
+                      <span className="block text-xs text-muted">{u.full_name}{u.email ? ` · ${u.email}` : ''}</span>
                     </td>
                     <td className="px-3 py-2.5">
                       <span className="font-medium">{u.role_label}</span>
@@ -178,6 +178,7 @@ function EditorUsuario({ usuario, cat, esYo, onCerrar, onGuardado }: {
   const [rol, setRol] = useState(rolInicial)
   const [permisos, setPermisos] = useState<Permisos>(existente?.permissions ?? perfilDe(rolInicial)!.permissions)
   const [nombre, setNombre] = useState(existente?.full_name ?? '')
+  const [correo, setCorreo] = useState(existente?.email ?? '')
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState<string | null>(null)
@@ -196,9 +197,9 @@ function EditorUsuario({ usuario, cat, esYo, onCerrar, onGuardado }: {
     try {
       const ajustes = esAdminRol ? undefined : permisos
       const u = nuevo
-        ? await api.crearUsuario({ username: username.trim(), password, full_name: nombre.trim(), role: rol, permissions: ajustes })
+        ? await api.crearUsuario({ username: username.trim(), password, full_name: nombre.trim(), email: correo.trim() || undefined, role: rol, permissions: ajustes })
         : await api.actualizarUsuario(existente!.id, {
-            full_name: nombre.trim(), role: rol,
+            full_name: nombre.trim(), email: correo.trim(), role: rol,
             ...(ajustados === 0 ? { reset_permissions: true } : { permissions: ajustes }),
           })
       onGuardado(u, nuevo)
@@ -219,6 +220,9 @@ function EditorUsuario({ usuario, cat, esYo, onCerrar, onGuardado }: {
             </select>
           </Campo>
         </div>
+        <Campo etiqueta="Correo electrónico" htmlFor="u-mail" ayuda="Se usa para «¿Olvidó su contraseña?». Sin correo, solo un administrador puede restablecerla.">
+          <input id="u-mail" type="email" className={claseInput} value={correo} onChange={(e) => setCorreo(e.target.value)} maxLength={120} autoComplete="off" />
+        </Campo>
         {nuevo && (
           <div className="grid gap-4 sm:grid-cols-2">
             <Campo etiqueta="Usuario" htmlFor="u-user" ayuda="Letras, números, punto o guion">

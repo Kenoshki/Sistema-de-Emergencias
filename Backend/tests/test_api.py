@@ -14,7 +14,10 @@ os.environ["SEED_DEMO_DATA"] = "False"
 os.environ["AUTO_DISPATCH"] = "True"
 os.environ["DEFAULT_ADMIN_USER"] = "admin"
 os.environ["DEFAULT_ADMIN_PASS"] = "1234password"
-os.environ["JWT_SECRET"] = "clave-de-prueba"
+os.environ["JWT_SECRET"] = "clave-de-prueba-con-mas-de-treinta-y-dos-caracteres"
+os.environ["DEBUG_MODE"] = "True"
+os.environ["RATE_LIMIT_ENABLED"] = "False"
+os.environ["DEFAULT_ADMIN_EMAIL"] = "admin@ejemplo.test"
 
 import pytest  # noqa: E402
 from fastapi.testclient import TestClient  # noqa: E402
@@ -356,3 +359,140 @@ def test_crear_y_eliminar_recurso(client, auth):
     estado = next(x for x in client.get("/api/admin/resources", headers=auth).json() if x["code"] == "AMB-99")["status"]
     if estado == "available":
         assert client.delete("/api/admin/resources/AMB-99", headers=auth).status_code == 204
+
+
+# ---------------------------------------------------- seguridad y recuperación
+def _crear_usuario(client, auth, username, email="oper@ejemplo.test", password="clave-inicial-1"):
+    r = client.post("/api/admin/users", headers=auth, json={
+        "username": username, "password": password, "full_name": "Prueba", "role": "flota", "email": email})
+    assert r.status_code == 201, r.text
+    return r.json()
+
+
+def _login(client, username, password):
+    return client.post("/api/auth/login", json={"username": username, "password": password})
+
+
+@pytest.fixture()
+def correos(monkeypatch):
+    """Captura los correos de recuperación en lugar de enviarlos."""
+    enviados = []
+    monkeypatch.setattr("app.routers.auth.enviar_recuperacion",
+                        lambda destino, nombre, enlace, minutos: enviados.append((destino, enlace)) or True)
+    return enviados
+
+
+def test_recuperar_contrasena_flujo_completo(client, auth, correos):
+    _crear_usuario(client, auth, "rec.flujo", "rec.flujo@ejemplo.test")
+    token_viejo = _login(client, "rec.flujo", "clave-inicial-1").json()["access_token"]
+
+    r = client.post("/api/auth/forgot-password", json={"identificador": "rec.flujo@ejemplo.test"})
+    assert r.status_code == 200
+    assert len(correos) == 1 and correos[0][0] == "rec.flujo@ejemplo.test"
+    token = correos[0][1].rsplit("/", 1)[1]
+
+    r = client.post("/api/auth/reset-password", json={"token": token, "password": "nueva-clave-segura"})
+    assert r.status_code == 200, r.text
+    assert _login(client, "rec.flujo", "nueva-clave-segura").status_code == 200
+    assert _login(client, "rec.flujo", "clave-inicial-1").status_code == 401
+    # el enlace sirve una sola vez y las sesiones anteriores quedan cerradas
+    assert client.post("/api/auth/reset-password", json={"token": token, "password": "otra-clave-nueva"}).status_code == 400
+    assert client.get("/api/auth/me", headers={"Authorization": f"Bearer {token_viejo}"}).status_code == 401
+
+
+def test_recuperar_no_revela_si_la_cuenta_existe(client, correos):
+    existente = client.post("/api/auth/forgot-password", json={"identificador": "admin"})
+    inexistente = client.post("/api/auth/forgot-password", json={"identificador": "no.existe.nadie"})
+    assert existente.status_code == inexistente.status_code == 200
+    assert existente.json() == inexistente.json()
+
+
+def test_token_de_recuperacion_invalido_o_vencido(client, auth, correos):
+    from datetime import datetime, timedelta
+
+    from app.database import SessionLocal
+    from app.models import PasswordResetModel
+
+    assert client.post("/api/auth/reset-password",
+                       json={"token": "x" * 40, "password": "nueva-clave-segura"}).status_code == 400
+    _crear_usuario(client, auth, "rec.vence", "rec.vence@ejemplo.test")
+    client.post("/api/auth/forgot-password", json={"identificador": "rec.vence"})
+    token = correos[-1][1].rsplit("/", 1)[1]
+    with SessionLocal() as db:
+        db.query(PasswordResetModel).update({"expires_at": datetime.now() - timedelta(minutes=1)})
+        db.commit()
+    assert client.post("/api/auth/reset-password", json={"token": token, "password": "nueva-clave-segura"}).status_code == 400
+
+
+def test_correo_unico_por_usuario(client, auth):
+    _crear_usuario(client, auth, "dup.uno", "duplicado@ejemplo.test")
+    r = client.post("/api/admin/users", headers=auth, json={
+        "username": "dup.dos", "password": "clave-inicial-1", "role": "flota", "email": "DUPLICADO@ejemplo.test"})
+    assert r.status_code == 409
+
+
+def test_cambiar_contrasena_cierra_sesiones(client, auth):
+    u = _crear_usuario(client, auth, "sesion.cierra", None)
+    token = _login(client, "sesion.cierra", "clave-inicial-1").json()["access_token"]
+    cab = {"Authorization": f"Bearer {token}"}
+    assert client.get("/api/auth/me", headers=cab).status_code == 200
+    assert client.patch(f"/api/admin/users/{u['id']}", headers=auth, json={"password": "otra-clave-nueva"}).status_code == 200
+    assert client.get("/api/auth/me", headers=cab).status_code == 401
+
+
+def test_login_se_bloquea_tras_varios_fallos(client, auth, monkeypatch):
+    from app import ratelimit
+
+    monkeypatch.setattr(ratelimit.settings, "RATE_LIMIT_ENABLED", True)
+    ratelimit.FALLOS_LOGIN.reiniciar()
+    _crear_usuario(client, auth, "fuerza.bruta", None)
+    for _ in range(ratelimit.FALLOS_LOGIN.maximo):
+        assert _login(client, "fuerza.bruta", "incorrecta").status_code == 401
+    # ya bloqueado: ni siquiera la contraseña correcta pasa
+    assert _login(client, "fuerza.bruta", "clave-inicial-1").status_code == 429
+    ratelimit.FALLOS_LOGIN.reiniciar()
+
+
+def test_usuario_desactivado_recibe_error_generico(client, auth):
+    u = _crear_usuario(client, auth, "desactivado", None)
+    client.patch(f"/api/admin/users/{u['id']}", headers=auth, json={"is_active": False})
+    r = _login(client, "desactivado", "clave-inicial-1")
+    assert r.status_code == 401
+    assert r.json()["detail"] == _login(client, "desactivado", "mala").json()["detail"]
+
+
+def test_reporte_publico_limita_prioridad_y_tasa(client, auth, monkeypatch):
+    from app import ratelimit
+
+    r = client.post("/api/public/incidents", json={"type": "fire", "priority": 4, **capital(2)})
+    assert r.status_code == 201
+    assert r.json()["data"]["priority"] == 3  # tope para reportes ciudadanos
+    assert len(r.json()["data"]["id"].split("-")) == 4  # INC-AAAAMMDD-NNNN-XXXX (no enumerable)
+
+    monkeypatch.setattr(ratelimit.settings, "RATE_LIMIT_ENABLED", True)
+    ratelimit.REPORTES_PUBLICOS.reiniciar()
+    codigos = [client.post("/api/public/incidents", json={"type": "medical", "priority": 1, **capital(3)}).status_code
+               for _ in range(ratelimit.REPORTES_PUBLICOS.maximo + 1)]
+    assert codigos[-1] == 429 and codigos[0] == 201
+    ratelimit.REPORTES_PUBLICOS.reiniciar()
+
+
+def test_busqueda_trata_comodines_como_texto(client, auth):
+    r = client.get("/api/admin/incidents", headers=auth, params={"q": "%"})
+    assert r.status_code == 200
+    assert r.json()["total"] == 0
+
+
+def test_arranque_falla_en_produccion_con_secretos_de_ejemplo():
+    from app.config import Settings
+
+    s = Settings()
+    s.DEBUG_MODE = False
+    s.JWT_SECRET = "cambie-esta-clave-secreta-en-el-env"
+    with pytest.raises(RuntimeError):
+        s.validar()
+    s.JWT_SECRET = "x" * 48
+    s.DEFAULT_ADMIN_PASS = "una-contrasena-larga-y-propia"
+    s.SEED_DEMO_DATA = False
+    s.validar()  # no lanza
+

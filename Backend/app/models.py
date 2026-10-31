@@ -29,11 +29,27 @@ class UserModel(Base):
     id = Column(Integer, primary_key=True, index=True, autoincrement=True)
     username = Column(String(50), unique=True, index=True, nullable=False)
     password_hash = Column(String(255), nullable=False)
+    # Correo para recuperar la contraseña (en minúsculas; la unicidad se valida en la API).
+    email = Column(String(120), nullable=True, index=True)
+    # Sube cada vez que cambia la contraseña, el rol o el estado: invalida los tokens anteriores.
+    token_version = Column(Integer, nullable=False, default=0, server_default="0")
     full_name = Column(String(100), nullable=False, default="")
     role = Column(String(20), nullable=False, default="operator")  # ver app/permisos.py → ROLES
     # Ajustes del administrador sobre el perfil del rol: JSON {"modulo": 0|1|2}. Vacío = perfil del rol.
     permissions = Column(Text, nullable=True)
     is_active = Column(Boolean, nullable=False, default=True)
+    created_at = Column(DateTime, nullable=False, default=datetime.now)
+
+
+class PasswordResetModel(Base):
+    """Enlace de recuperación de contraseña. Solo se guarda el hash del token."""
+    __tablename__ = "password_resets"
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False, index=True)
+    token_hash = Column(String(64), unique=True, nullable=False)  # SHA-256 en hexadecimal
+    expires_at = Column(DateTime, nullable=False)
+    used_at = Column(DateTime, nullable=True)
     created_at = Column(DateTime, nullable=False, default=datetime.now)
 
 

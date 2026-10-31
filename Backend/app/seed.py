@@ -54,9 +54,14 @@ def _crear_geografia(db: Session) -> None:
 
 
 def _crear_admin(db: Session) -> None:
-    if db.query(UserModel).filter(UserModel.username == settings.DEFAULT_ADMIN_USER).first():
+    existente = db.query(UserModel).filter(UserModel.username == settings.DEFAULT_ADMIN_USER).first()
+    if existente:
+        if settings.DEFAULT_ADMIN_EMAIL and not existente.email:
+            existente.email = settings.DEFAULT_ADMIN_EMAIL  # habilita «Olvidé mi contraseña» en cuentas anteriores
+            db.commit()
         return
     db.add(UserModel(
+        email=settings.DEFAULT_ADMIN_EMAIL or None,
         username=settings.DEFAULT_ADMIN_USER,
         password_hash=hash_password(settings.DEFAULT_ADMIN_PASS),
         full_name="Administrador del sistema",
