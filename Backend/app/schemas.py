@@ -54,6 +54,8 @@ class IncidentCreate(Ubicacion):
     priority: int = Field(..., ge=1, le=4, description="1 = bajo ... 4 = crítico")
     address: Optional[str] = Field(None, max_length=200)
     description: Optional[str] = Field(None, max_length=1000)
+    # Identificador único del envío: permite reintentar sin duplicar el reporte (ver app/idempotencia.py).
+    client_request_id: Optional[str] = Field(None, min_length=8, max_length=64, pattern=r"^[A-Za-z0-9_-]+$")
     reporter_name: Optional[str] = Field(None, max_length=100)
     reporter_phone: Optional[str] = Field(None, max_length=20)
 

@@ -1,9 +1,10 @@
 """Módulo público: el ciudadano reporta y da seguimiento a su emergencia."""
-from fastapi import APIRouter, Depends, HTTPException, Query, Request
+from fastapi import APIRouter, Depends, HTTPException, Query, Request, Response
 from sqlalchemy import func
 from sqlalchemy.orm import Session
 
 from app.catalogos import ESTADOS_INCIDENTE, PRIORIDADES, TIPOS_INCIDENTE, TIPOS_RECURSO, ZONAS_CAPITAL
+from app import idempotencia
 from app.config import settings
 from app.database import escapar_like, get_db
 from app.ratelimit import CONSULTAS_SEGUIMIENTO, REPORTES_PUBLICOS, ip_cliente
@@ -23,8 +24,10 @@ def _nombre_zona(municipio: str, z: int) -> str:
 
 
 @router.get("/catalogs")
-def catalogos(db: Session = Depends(get_db)):
+def catalogos(response: Response, db: Session = Depends(get_db)):
     """Listas para llenar los formularios (tipos, prioridades, departamentos, municipios y zonas)."""
+    # Casi no cambia: el navegador puede reutilizarlo una hora (ahorra datos con mala señal).
+    response.headers["Cache-Control"] = "public, max-age=3600"
     con_lugares = {c for (c,) in db.query(PlaceModel.municipality_code).distinct().all()}
     return {
         "incident_types": [{"value": k, "label": v} for k, v in TIPOS_INCIDENTE.items()],
@@ -81,6 +84,11 @@ def buscar_lugares(
 
 @router.post("/incidents", status_code=201)
 def registrar_incidente_publico(datos: IncidentCreate, request: Request, db: Session = Depends(get_db)):
+    # Reintento de un envío ya registrado: se devuelve el mismo incidente (no cuenta para el límite).
+    previo = db.get(IncidentModel, idempotencia.buscar(datos.client_request_id) or "")
+    if previo is not None:
+        return {"message": f"Reporte {previo.id} recibido. Guarde este código para dar seguimiento.",
+                "data": ser.incidente_publico(previo)}
     # Anti-abuso: límite por conexión, y el ciudadano no puede escalar la prioridad por sí mismo
     # (el operador la reclasifica al verificar el reporte).
     REPORTES_PUBLICOS.exigir(f"ip:{ip_cliente(request)}")
@@ -88,6 +96,7 @@ def registrar_incidente_publico(datos: IncidentCreate, request: Request, db: Ses
     inc = crear_incidente(db, datos, source="public")
     db.commit()
     db.refresh(inc)
+    idempotencia.recordar(datos.client_request_id, inc.id)
     return {
         "message": f"Reporte {inc.id} recibido. Guarde este código para dar seguimiento.",
         "data": ser.incidente_publico(inc),

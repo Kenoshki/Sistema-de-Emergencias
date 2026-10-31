@@ -12,6 +12,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI, Request
 from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.middleware.gzip import GZipMiddleware
 from fastapi.responses import JSONResponse
 
 from app.config import settings
@@ -58,6 +59,8 @@ async def cabeceras_de_seguridad(request: Request, call_next):
     return respuesta
 
 
+# Comprime las respuestas grandes (catálogos, listados): importante con mala señal.
+app.add_middleware(GZipMiddleware, minimum_size=500)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=settings.CORS_ORIGINS,

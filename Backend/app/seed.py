@@ -83,10 +83,9 @@ def _crear_flota(db: Session) -> None:
     db.commit()
 
 
-def _crear_historial(db: Session) -> None:
-    if db.query(IncidentModel).count() > 0:
-        return
-    for h in generar_historial():
+def insertar_historial(db: Session, historial: list[dict]) -> int:
+    """Guarda incidentes ya resueltos/cancelados (con sus asignaciones y bitácora). Devuelve cuántos."""
+    for h in historial:
         db.add(IncidentModel(
             id=h["id"], type=h["type"], priority=h["priority"],
             department_code=h["department_code"], municipality_code=h["municipality_code"],
@@ -113,6 +112,14 @@ def _crear_historial(db: Session) -> None:
         for cuando, evento, detalle in eventos:
             db.add(IncidentEventModel(incident_id=h["id"], timestamp=cuando, event=evento, detail=detalle, username="sistema"))
     db.commit()
+
+    return len(historial)
+
+
+def _crear_historial(db: Session) -> None:
+    if db.query(IncidentModel).count() > 0:
+        return
+    insertar_historial(db, generar_historial())
 
     # Algunos incidentes activos creados con el flujo real (despacho automático).
     from app.schemas import IncidentCreate
@@ -157,6 +164,9 @@ def sembrar_datos(db: Session) -> None:
     _crear_geografia(db)
     _crear_admin(db)
     _crear_flota(db)
+    if settings.CARGAR_MUESTRA:
+        from app.muestra import cargar_muestra
+        cargar_muestra(db)
     if settings.SEED_DEMO_DATA:
         _crear_usuarios_demo(db)
         _crear_historial(db)

@@ -1,22 +1,26 @@
-import { useEffect, type ReactNode } from 'react'
+import { lazy, Suspense, useEffect, type ReactNode } from 'react'
 import { NotificacionesProvider } from './components/Notificaciones'
 import { Aviso, Cargando } from './components/ui'
 import { AuthProvider, useAuth } from './lib/auth'
 import type { Modulo } from './lib/types'
+import { MENU } from './pages/admin/menu'
 import { coincide, navegar, useRuta } from './lib/router'
-import { AdminLayout, MENU } from './pages/admin/AdminLayout'
-import { Despacho } from './pages/admin/Despacho'
-import { Flota } from './pages/admin/Flota'
-import { IncidenteDetalle } from './pages/admin/IncidenteDetalle'
-import { Incidentes } from './pages/admin/Incidentes'
-import { Login } from './pages/admin/Login'
-import { RecuperarContrasena } from './pages/admin/RecuperarContrasena'
-import { Panel } from './pages/admin/Panel'
-import { RedVial } from './pages/admin/RedVial'
-import { Reportes } from './pages/admin/Reportes'
-import { Usuarios } from './pages/admin/Usuarios'
 import { PortalPublico } from './pages/public/PortalPublico'
 import { Seguimiento } from './pages/public/Seguimiento'
+
+// Las pantallas del centro de despacho (con mapas y gráficas) se descargan solo al entrar a ellas:
+// el portal ciudadano queda mucho más liviano para quien tiene mala señal.
+const AdminLayout = lazy(() => import('./pages/admin/AdminLayout').then((m) => ({ default: m.AdminLayout })))
+const Despacho = lazy(() => import('./pages/admin/Despacho').then((m) => ({ default: m.Despacho })))
+const Flota = lazy(() => import('./pages/admin/Flota').then((m) => ({ default: m.Flota })))
+const IncidenteDetalle = lazy(() => import('./pages/admin/IncidenteDetalle').then((m) => ({ default: m.IncidenteDetalle })))
+const Incidentes = lazy(() => import('./pages/admin/Incidentes').then((m) => ({ default: m.Incidentes })))
+const Login = lazy(() => import('./pages/admin/Login').then((m) => ({ default: m.Login })))
+const Panel = lazy(() => import('./pages/admin/Panel').then((m) => ({ default: m.Panel })))
+const RecuperarContrasena = lazy(() => import('./pages/admin/RecuperarContrasena').then((m) => ({ default: m.RecuperarContrasena })))
+const RedVial = lazy(() => import('./pages/admin/RedVial').then((m) => ({ default: m.RedVial })))
+const Reportes = lazy(() => import('./pages/admin/Reportes').then((m) => ({ default: m.Reportes })))
+const Usuarios = lazy(() => import('./pages/admin/Usuarios').then((m) => ({ default: m.Usuarios })))
 
 function Rutas() {
   const ruta = useRuta()
@@ -82,7 +86,9 @@ export default function App() {
   return (
     <AuthProvider>
       <NotificacionesProvider>
-        <Rutas />
+        <Suspense fallback={<Cargando />}>
+          <Rutas />
+        </Suspense>
       </NotificacionesProvider>
     </AuthProvider>
   )

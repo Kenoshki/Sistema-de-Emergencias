@@ -496,3 +496,48 @@ def test_arranque_falla_en_produccion_con_secretos_de_ejemplo():
     s.SEED_DEMO_DATA = False
     s.validar()  # no lanza
 
+
+
+# ------------------------------------------------------------ datos de muestra
+def test_carga_de_muestra_100_incidentes_y_3_usuarios(client, auth):
+    from app.database import SessionLocal
+    from app.models import IncidentModel
+    from app.muestra import USUARIOS_MUESTRA, cargar_muestra
+
+    with SessionLocal() as db:
+        antes = db.query(IncidentModel).count()
+        r = cargar_muestra(db, cantidad=100, password="clave-muestra-123")
+        assert r == {"incidentes": 100, "usuarios": 3, "omitido": False}
+        assert db.query(IncidentModel).count() == antes + 100
+        # idempotente: una segunda carga no duplica nada
+        assert cargar_muestra(db, password="clave-muestra-123")["omitido"] is True
+        assert db.query(IncidentModel).count() == antes + 100
+
+    roles = set()
+    for usuario, _, rol in USUARIOS_MUESTRA:
+        r = _login(client, usuario, "clave-muestra-123")
+        assert r.status_code == 200, usuario
+        roles.add(r.json()["user"]["role"])
+    assert roles == {"incidentes", "flota", "red_vial"}
+    # los incidentes de muestra aparecen en el listado y en los indicadores
+    assert client.get("/api/admin/incidents", headers=auth, params={"limit": 1}).json()["total"] >= 100
+    assert client.get("/api/admin/analytics/kpis", headers=auth).status_code == 200
+
+
+# ------------------------------------------------------- mala señal / reintentos
+def test_reintento_con_el_mismo_id_no_duplica_el_reporte(client):
+    cuerpo = {"type": "medical", "priority": 2, **capital(5), "client_request_id": "envio-unico-0001"}
+    a = client.post("/api/public/incidents", json=cuerpo)
+    b = client.post("/api/public/incidents", json=cuerpo)
+    assert a.status_code == b.status_code == 201
+    assert a.json()["data"]["id"] == b.json()["data"]["id"]
+    otro = client.post("/api/public/incidents", json={**cuerpo, "client_request_id": "envio-unico-0002"})
+    assert otro.json()["data"]["id"] != a.json()["data"]["id"]
+
+
+def test_catalogo_se_puede_cachear_y_va_comprimido(client):
+    r = client.get("/api/public/catalogs", headers={"Accept-Encoding": "gzip"})
+    assert r.status_code == 200
+    assert "max-age" in r.headers["cache-control"]
+    assert r.headers.get("content-encoding") == "gzip"
+    assert client.get("/api/health").headers["cache-control"] == "no-store"

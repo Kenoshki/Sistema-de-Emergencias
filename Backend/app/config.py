@@ -60,6 +60,11 @@ class Settings:
     # Contraseña de los operadores de demostración (incidentes, flota, red vial).
     DEMO_USERS_PASS: str = os.getenv("DEMO_USERS_PASS", DEMO_PASS_EJEMPLO)
 
+    # Carga única de datos de muestra (100 incidentes + 3 usuarios). Vea app/muestra.py.
+    CARGAR_MUESTRA: bool = _bool("CARGAR_MUESTRA", False)
+    MUESTRA_PASS: str = os.getenv("MUESTRA_PASS", "")
+    MUESTRA_CANTIDAD: int = int(os.getenv("MUESTRA_CANTIDAD", "100"))
+
     # Prioridad máxima que puede declarar un ciudadano (el operador puede reclasificar).
     PUBLIC_MAX_PRIORITY: int = int(os.getenv("PUBLIC_MAX_PRIORITY", "3"))
 
@@ -99,6 +104,8 @@ class Settings:
         if self.SEED_DEMO_DATA and self.DEMO_USERS_PASS == DEMO_PASS_EJEMPLO:
             problemas.append("SEED_DEMO_DATA=True crea operadores con contraseña pública; "
                              "desactívelo o cambie DEMO_USERS_PASS.")
+        if self.CARGAR_MUESTRA and (len(self.MUESTRA_PASS) < 10 or self.MUESTRA_PASS == DEMO_PASS_EJEMPLO):
+            problemas.append("CARGAR_MUESTRA=True requiere MUESTRA_PASS propia de 10 caracteres o más.")
         if not problemas:
             return
         if self.DEBUG_MODE:

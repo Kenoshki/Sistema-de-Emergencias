@@ -1,24 +1,12 @@
-import { FileDown, LayoutDashboard, LogOut, Menu, Plus, Radio, Siren, Truck, Users, Waypoints, X, type LucideIcon } from 'lucide-react'
+import { LogOut, Menu, Plus, Siren, X } from 'lucide-react'
 import { useEffect, useState, type ReactNode } from 'react'
 import { Boton } from '../../components/ui'
 import { useAuth } from '../../lib/auth'
 import { useReloj } from '../../lib/hooks'
 import { navegar } from '../../lib/router'
-import type { Incidente, Modulo } from '../../lib/types'
+import type { Incidente } from '../../lib/types'
 import { FormIncidente } from './FormIncidente'
-
-interface Item { ruta: string; titulo: string; icono: LucideIcon; modulo?: Modulo }
-
-/** Menú del centro de despacho. Cada opción aparece solo si el usuario puede ver su módulo. */
-export const MENU: Item[] = [
-  { ruta: '/admin', titulo: 'Panel', icono: LayoutDashboard, modulo: 'panel' },
-  { ruta: '/admin/incidentes', titulo: 'Incidentes', icono: Siren, modulo: 'incidentes' },
-  { ruta: '/admin/despacho', titulo: 'Despacho', icono: Radio, modulo: 'despacho' },
-  { ruta: '/admin/flota', titulo: 'Flota', icono: Truck, modulo: 'flota' },
-  { ruta: '/admin/red', titulo: 'Red vial', icono: Waypoints, modulo: 'red' },
-  { ruta: '/admin/reportes', titulo: 'Reportes', icono: FileDown, modulo: 'reportes' },
-  { ruta: '/admin/usuarios', titulo: 'Usuarios y permisos', icono: Users },  // solo administrador
-]
+import { MENU, type Item } from './menu'
 
 export function AdminLayout({ ruta, titulo, children, onIncidenteCreado }: {
   ruta: string; titulo: string; children: ReactNode; onIncidenteCreado?: (inc: Incidente) => void

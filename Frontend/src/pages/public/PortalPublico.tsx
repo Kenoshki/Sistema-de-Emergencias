@@ -1,11 +1,14 @@
 import { CircleCheck, LocateFixed, MapPin, Phone, Search, Send, Siren } from 'lucide-react'
-import { useRef, useState, type FormEvent } from 'react'
+import { useEffect, useRef, useState, type FormEvent } from 'react'
 import { IconoIncidente, TEXTO_INCIDENTE } from '../../components/iconos'
 import {
   SelectorUbicacion, UBICACION_VACIA, textoUbicacion, validarUbicacion, type ErroresUbicacion,
 } from '../../components/SelectorUbicacion'
 import { Aviso, Boton, Campo, Cargando, claseInput } from '../../components/ui'
 import { api, mensajeError } from '../../lib/api'
+import {
+  enviarReporte, EVENTO_COLA, EVENTO_ENVIADO, iniciarVigilancia, pendientes,
+} from '../../lib/reportes'
 import { useDatos } from '../../lib/hooks'
 import { navegar } from '../../lib/router'
 import type { IncidentePublico, IncidentType, UbicacionForm } from '../../lib/types'
@@ -42,6 +45,17 @@ export function PortalPublico() {
   const [enviando, setEnviando] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [resultado, setResultado] = useState<IncidentePublico | null>(null)
+  const [enCola, setEnCola] = useState(pendientes())
+
+  // Reportes guardados por falta de señal: se envían solos al volver la conexión.
+  useEffect(() => {
+    iniciarVigilancia()
+    const alCambiarCola = () => setEnCola(pendientes())
+    const alEnviar = (e: Event) => { setResultado((e as CustomEvent<IncidentePublico>).detail); window.scrollTo({ top: 0, behavior: 'smooth' }) }
+    window.addEventListener(EVENTO_COLA, alCambiarCola)
+    window.addEventListener(EVENTO_ENVIADO, alEnviar)
+    return () => { window.removeEventListener(EVENTO_COLA, alCambiarCola); window.removeEventListener(EVENTO_ENVIADO, alEnviar) }
+  }, [])
   const [codigo, setCodigo] = useState('')
 
   const erroresUbicacion: ErroresUbicacion = intento ? validarUbicacion(ubicacion, cat) : {}
@@ -104,7 +118,7 @@ export function PortalPublico() {
     setEnviando(true)
     setError(null)
     try {
-      const r = await api.reportar({
+      const r = await enviarReporte({
         type: tipo!,
         priority: prioridad!,
         department_code: ubicacion.department_code,
@@ -119,8 +133,13 @@ export function PortalPublico() {
         reporter_name: nombre || undefined,
         reporter_phone: telefono || undefined,
       })
-      setResultado(r.data)
-      window.scrollTo({ top: 0, behavior: 'smooth' })
+      if (r.estado === 'enviado') {
+        setResultado(r.resultado)
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      } else {
+        setError(null)
+        setEnCola(pendientes())
+      }
     } catch (err) {
       setError(mensajeError(err, 'No se pudo enviar el reporte. Intente de nuevo o llame a los números de emergencia.'))
     } finally {
@@ -167,6 +186,12 @@ export function PortalPublico() {
           <Confirmacion resultado={resultado} onNuevo={nuevoReporte} />
         ) : (
           <form onSubmit={enviar} className="space-y-8" noValidate>
+            {enCola > 0 && (
+              <Aviso tipo="info">
+                Sin conexión: su reporte quedó guardado en este teléfono y se enviará automáticamente cuando vuelva la señal.
+                Mantenga esta página abierta y, si hay peligro, llame ahora a los números de emergencia.
+              </Aviso>
+            )}
             <div>
               <h1 className="font-display text-4xl font-bold leading-[1.05] sm:text-5xl">Reportar una emergencia</h1>
               <p className="mt-2 max-w-xl text-muted">

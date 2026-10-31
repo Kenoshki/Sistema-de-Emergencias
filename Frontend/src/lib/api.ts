@@ -90,6 +90,7 @@ export interface NuevoReporte {
   description?: string
   reporter_name?: string
   reporter_phone?: string
+  client_request_id?: string
 }
 
 export const api = {
@@ -99,7 +100,7 @@ export const api = {
   lugares: (municipality: string, q: string) =>
     http.get<Lugar[]>('/public/places', { params: { municipality, q } }).then((r) => r.data),
   reportar: (datos: NuevoReporte) =>
-    http.post<{ message: string; data: IncidentePublico }>('/public/incidents', datos).then((r) => r.data),
+    http.post<{ message: string; data: IncidentePublico }>('/public/incidents', datos, { timeout: 45000 }).then((r) => r.data),
   seguimiento: (id: string) => http.get<IncidentePublico>(`/public/incidents/${encodeURIComponent(id)}`).then((r) => r.data),
 
   // ---- Autenticación

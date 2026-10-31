@@ -53,6 +53,14 @@ restablecer una contraseña desde *Usuarios y permisos*.
 - Revise que `/docs` responda 404 (la documentación interactiva se oculta en producción; `ENABLE_DOCS=true` la activa).
 - Haga copias de seguridad del MySQL (Railway: pestaña *Backups*).
 
+## Cargar datos de muestra (100 incidentes y 3 usuarios)
+1. En las variables del **backend** agregue `CARGAR_MUESTRA=True` y `MUESTRA_PASS=<contraseña propia de 10+ caracteres>`.
+2. Espere a que se despliegue. Se crean 100 incidentes recientes (con unidades y bitácora) y 3 usuarios:
+   `muestra.incidentes` (perfil incidentes), `muestra.flota` (perfil flota) y `muestra.red` (perfil red vial), todos con `MUESTRA_PASS`.
+3. **Quite `CARGAR_MUESTRA`** (los datos quedan guardados). Si se deja, no duplica nada: detecta que la muestra ya existe.
+
+También se puede cargar desde su computadora: `python scripts/cargar_muestra.py` con `DATABASE_URL` apuntando a la base.
+
 ## Actualizar un esquema anterior
 Si una base existente tiene un esquema viejo, el backend se detiene en lugar de borrar datos. Haga una copia de seguridad
 y arranque una vez con `RESET_SCHEMA=true` (se pierden incidentes y flota; los usuarios se conservan), luego quite la variable.
